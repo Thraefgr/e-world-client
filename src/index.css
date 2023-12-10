@@ -1,0 +1,30 @@
+@font-face { /*Font family for headings.*/
+    font-family: POE;
+    src: url(./fonts/PiecesOfEight.ttf);
+}
+
+@font-face { /*Font family for regular texts.*/
+    font-family: HLS;
+    src: url(./fonts/HedvigLettersSerif-Regular-VariableFont_opsz.ttf);
+}
+
+:root { /* Core variables for the project*/
+    --background-color: #1a120b;
+    --font-color: #e5e5cb;
+    --heading-font: POE;
+    --text-font: HLS;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--text-font);
+    background-color: var(--background-color);/*https://colorhunt.co/palette/1c0a00361500603601cc9544 theme link.*/
+    color: var(--font-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 400;/*It was too bold.*/
+}
