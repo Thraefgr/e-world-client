@@ -61,7 +61,15 @@
     color: #f2f2d7;
 }
 
-.card-buttons > *:hover {
+.card-button:hover {
     background-color: #f2f2d7;
     color: #0c0805;
+}
+
+.card-button:hover svg {
+    fill: #0c0805;
+}
+
+.card-button svg {
+    fill: #f2f2d7;
 }
