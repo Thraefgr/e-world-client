@@ -1,0 +1,38 @@
+.card-faces {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+.front-face, .back-face {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    width: inherit;
+    height: inherit;
+}
+
+.front-face {
+    background-image: url(./front.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-power, .card-name {
+    text-shadow: 0.15rem 0.15rem 0.1rem black;
+}
+
+.card-power {
+    font-size: 2rem;
+}
+
+.card-name {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.back-face {
+    background-image: url(./back.png);
+}

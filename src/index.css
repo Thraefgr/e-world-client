@@ -20,8 +20,11 @@
     margin: 0;
     padding: 0;
     font-family: var(--text-font);
-    background-color: var(--background-color);/*https://colorhunt.co/palette/1c0a00361500603601cc9544 theme link.*/
     color: var(--font-color);
+}
+
+body {
+    background-color: var(--background-color);/*https://colorhunt.co/palette/1c0a00361500603601cc9544 theme link.*/
 }
 
 h1, h2, h3, h4, h5, h6 {
