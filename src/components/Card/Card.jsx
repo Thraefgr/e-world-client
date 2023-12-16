@@ -1,6 +1,20 @@
 import "./Card.css";
+import { useState } from "react";
 
 export default function Card() {
+
+    const [cardRotation, setCardRotation] = useState(0);
+    const cardRotationStyle = {
+        transform: `rotateY(${cardRotation}deg)`
+    }
+
+    const handleRotateRight = () => {
+        setCardRotation(prev => (prev - 180) % 2880)
+    }
+
+    const handleRotateLeft = () => {
+        setCardRotation(prev => (prev + 180) % 2880)
+    }
 
     const rotateRightSVG = 
         (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-clockwise" viewBox="0 0 16 16">
@@ -16,8 +30,8 @@ export default function Card() {
 
     return (
         <div className="card">
-            <div className="card-faces">
-                <div className="back-face">
+            <div className="card-faces" style={cardRotationStyle}>
+                <div className="back-face" >
                     <p>Once upon a time there was a wicked card!</p>
                 </div>
                 <div className="front-face">
@@ -26,9 +40,9 @@ export default function Card() {
                 </div>
             </div>
             <div className="card-buttons">
-                <button className="card-button rotate-right">{rotateRightSVG}</button>
+                <button className="card-button rotate-right" onClick={handleRotateRight}>{rotateRightSVG}</button>
                 <button className="card-button purchase">Purchase</button>
-                <button className="card-button rotate-left">{rotateLeftSVG}</button>
+                <button className="card-button rotate-left" onClick={handleRotateLeft}>{rotateLeftSVG}</button>
             </div>
         </div>
     )

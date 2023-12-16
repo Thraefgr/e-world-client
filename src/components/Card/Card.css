@@ -1,11 +1,14 @@
 .card {
     width: 300px;
+    perspective: 1080px;
 }
 
 .card-faces {
     position: relative;
     width: inherit;
     height: 400px;
+    transition: all 1s;
+    transform-style: preserve-3d;
 }
 
 .front-face, .back-face {
@@ -15,6 +18,7 @@
     padding: 1rem;
     width: inherit;
     height: inherit;
+    backface-visibility: hidden;
 }
 
 .front-face {
@@ -41,6 +45,7 @@
 .back-face {
     background-image: url(./back.png);
     color: #f2f2d7;
+    transform: rotateY(180deg);
 }
 
 /*####################################### BUTTON STYLES #######################################*/
