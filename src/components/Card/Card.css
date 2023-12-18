@@ -1,6 +1,7 @@
 .card {
     width: 300px;
     perspective: 1080px;
+    box-shadow: 0.2rem 0.2rem 0.2rem black;
 }
 
 .card-faces {
@@ -58,7 +59,7 @@
 .card-buttons > * {
     flex: 1;
     padding: 0.4rem;
-    background-color: transparent;
+    background-color: #1a120b;;;
     cursor: pointer;
     border: none;
     transition: all 0.5s;

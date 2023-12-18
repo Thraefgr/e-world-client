@@ -16,7 +16,7 @@ export default function Cards(sessionToken) {
     }, [])
 
     return (
-        <section className="Cards">
+        <section className="cards">
             {cardList.map(card => <Card key={card.id} card={card} />)}
         </section>
     )

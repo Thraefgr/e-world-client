@@ -1,0 +1,10 @@
+.cards {
+    background-image: url(./homeBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding: 2rem;
+}
