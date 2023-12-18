@@ -1,8 +1,9 @@
 import "./Card.css";
 import { useState } from "react";
+import PurchasePopUp from "../PurchasePopUp/PurchasePopUp";
 
 export default function Card({card}) {
-
+    const [purchasePopUpVisibility, setpurchasePopUpVisibility] = useState("none");
     const [cardRotation, setCardRotation] = useState(0);
     const cardRotationStyle = {
         transform: `rotateY(${cardRotation}deg)`
@@ -16,6 +17,10 @@ export default function Card({card}) {
         setCardRotation(prev => (prev + 180) % 2880)
     }
 
+    const handlePurchase = () => {
+        setpurchasePopUpVisibility("block");
+    }
+    
     const rotateRightSVG = 
         (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-clockwise" viewBox="0 0 16 16">
              <path fillRule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
@@ -34,14 +39,15 @@ export default function Card({card}) {
                 <div className="back-face">
                     <p>{card.detail}</p>
                 </div>
-                <div className="front-face">
+                <div className="front-face" style={{backgroundImage: `url(${card.image})`}}>
                     <h4 className="card-power">{card.power}</h4>
+                    <PurchasePopUp card={card} visibility={purchasePopUpVisibility} />
                     <h3 className="card-name">{card.cardname}</h3>
                 </div>
             </div>
             <div className="card-buttons">
                 <button className="card-button rotate-right" onClick={handleRotateRight}>{rotateRightSVG}</button>
-                <button className="card-button purchase">Purchase</button>
+                <button className="card-button purchase" onClick={handlePurchase}>Purchase</button>
                 <button className="card-button rotate-left" onClick={handleRotateLeft}>{rotateLeftSVG}</button>
             </div>
         </div>
