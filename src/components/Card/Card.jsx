@@ -18,7 +18,7 @@ export default function Card({card}) {
     }
 
     const handlePurchase = () => {
-        setpurchasePopUpVisibility("block");
+        setpurchasePopUpVisibility("flex");
     }
     
     const rotateRightSVG = 

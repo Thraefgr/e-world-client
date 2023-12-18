@@ -1,7 +1,8 @@
 .card {
     width: 300px;
     perspective: 1080px;
-    box-shadow: 0.2rem 0.2rem 0.2rem black;
+    box-shadow: 0.5rem 0.5rem 0.4rem black;
+    border-radius: 1rem 1rem 0 0;
 }
 
 .card-faces {
@@ -20,6 +21,7 @@
     width: inherit;
     height: inherit;
     backface-visibility: hidden;
+    border-radius: 1rem 1rem 0 0;
 }
 
 .front-face {

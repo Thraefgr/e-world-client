@@ -1,15 +1,45 @@
 .purchase-pop-up {
     display: none;
-    background-color: #f2f2d7;
-    color: #1a120b;
     border-radius: 0.5rem;
     padding: 0.5rem;
+    flex-direction: column;
+    background-color: #f2f2d7;
+    gap: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem black;
 }
 
-.question, .yes, .no {
+.question {
     color: #0c0805;
 }
 
-.yes, .no {
+.answer {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.choice {
     border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    color: #f2f2d7;
+    transition: all 0.5s;
+}
+
+.yes {
+    background-color: darkgreen;
+}
+
+.no {
+    background-color: darkred;
+}
+
+.no:hover {
+    background-color: rgb(255, 100, 100);
+    color: #0c0805;
+}
+
+.yes:hover {
+    background-color: rgb(100, 255, 100);
+    color: #0c0805;
 }

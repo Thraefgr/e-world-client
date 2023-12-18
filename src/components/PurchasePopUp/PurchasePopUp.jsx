@@ -24,8 +24,8 @@ export default function PurchasePopUp({card, visibility, setVisibility}) {
         <div className="purchase-pop-up" style={{display: `${visibility}`}}>
             <div className="question">Purchase "{card.cardname}"<br /> for {card.price} E-Coin?</div>
             <div className="answer">
-                <button className="no" onClick={handleNo}>No</button>
-                <button className="yes" onClick={handleYes}>Yes</button>
+                <button className="choice no" onClick={handleNo}>No</button>
+                <button className="choice yes" onClick={handleYes}>Yes</button>
             </div>
         </div>
     )
