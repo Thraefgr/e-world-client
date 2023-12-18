@@ -19,8 +19,12 @@ export default function Card({card}) {
     }
 
     const handlePurchase = () => {
-        setpurchasePopUpVisibility("flex");
-        setTimeout(() => setPopUpPosition("200%"), 50)
+        if (card.price === 0) {
+
+        } else {
+            setpurchasePopUpVisibility("flex");
+            setTimeout(() => setPopUpPosition("200%"), 50)
+        }
     }
     
     const rotateRightSVG = 
@@ -34,6 +38,18 @@ export default function Card({card}) {
              <path fillRule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
              <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
          </svg>)
+
+    let ownerShip = "Purchase";
+
+    const decideOwnership = () => {
+        if (card.price === 0) {
+            ownerShip = "Owned"
+        } else {
+            ownerShip = "Purchase"
+        }
+    }
+
+    decideOwnership();
 
     return (
         <div className="card">
@@ -49,7 +65,7 @@ export default function Card({card}) {
             </div>
             <div className="card-buttons">
                 <button className="card-button rotate-right" onClick={handleRotateRight}>{rotateRightSVG}</button>
-                <button className="card-button purchase" onClick={handlePurchase}>Purchase</button>
+                <button className="card-button purchase" onClick={handlePurchase}>{ownerShip}</button>
                 <button className="card-button rotate-left" onClick={handleRotateLeft}>{rotateLeftSVG}</button>
             </div>
         </div>
