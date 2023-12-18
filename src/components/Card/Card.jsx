@@ -1,7 +1,7 @@
 import "./Card.css";
 import { useState } from "react";
 
-export default function Card() {
+export default function Card({card}) {
 
     const [cardRotation, setCardRotation] = useState(0);
     const cardRotationStyle = {
@@ -31,12 +31,12 @@ export default function Card() {
     return (
         <div className="card">
             <div className="card-faces" style={cardRotationStyle}>
-                <div className="back-face" >
-                    <p>Once upon a time there was a wicked card!</p>
+                <div className="back-face">
+                    <p>{card.detail}</p>
                 </div>
                 <div className="front-face">
-                    <h4 className="card-power">22</h4>
-                    <h3 className="card-name">Ferhat Khan</h3>
+                    <h4 className="card-power">{card.power}</h4>
+                    <h3 className="card-name">{card.cardname}</h3>
                 </div>
             </div>
             <div className="card-buttons">
