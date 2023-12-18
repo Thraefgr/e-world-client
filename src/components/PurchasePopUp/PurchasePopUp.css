@@ -1,0 +1,15 @@
+.purchase-pop-up {
+    display: none;
+    background-color: #f2f2d7;
+    color: #1a120b;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.question, .yes, .no {
+    color: #0c0805;
+}
+
+.yes, .no {
+    border: none;
+}
