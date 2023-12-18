@@ -1,11 +1,14 @@
 .purchase-pop-up {
     display: none;
+    position: absolute;
+    width: inherit;
     border-radius: 0.5rem;
     padding: 0.5rem;
     flex-direction: column;
     background-color: #f2f2d7;
     gap: 0.5rem;
     box-shadow: 0.2rem 0.2rem 0.2rem black;
+    transition: all 1s;
 }
 
 .question {

@@ -5,6 +5,7 @@ import PurchasePopUp from "../PurchasePopUp/PurchasePopUp";
 export default function Card({card}) {
     const [purchasePopUpVisibility, setpurchasePopUpVisibility] = useState("none");
     const [cardRotation, setCardRotation] = useState(0);
+    const [popUpPosition, setPopUpPosition] = useState(0);
     const cardRotationStyle = {
         transform: `rotateY(${cardRotation}deg)`
     }
@@ -19,6 +20,7 @@ export default function Card({card}) {
 
     const handlePurchase = () => {
         setpurchasePopUpVisibility("flex");
+        setTimeout(() => setPopUpPosition("200%"), 50)
     }
     
     const rotateRightSVG = 
@@ -41,7 +43,7 @@ export default function Card({card}) {
                 </div>
                 <div className="front-face" style={{backgroundImage: `url(${card.image})`}}>
                     <h4 className="card-power">{card.power}</h4>
-                    <PurchasePopUp card={card} visibility={purchasePopUpVisibility} setVisibility={setpurchasePopUpVisibility} />
+                    <PurchasePopUp card={card} visibility={purchasePopUpVisibility} setVisibility={setpurchasePopUpVisibility} popUpPosition={popUpPosition} setPopUpPosition={setPopUpPosition}/>
                     <h3 className="card-name">{card.cardname}</h3>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import "./PurchasePopUp.css"
-import {Navigate} from "react-router-dom";
 
-export default function PurchasePopUp({card, visibility, setVisibility}) {
+export default function PurchasePopUp({card, visibility, setVisibility, popUpPosition, setPopUpPosition}) {
     const bodyParam = {
         username: "buyer",
         cardname: "Emiruto"
@@ -18,10 +17,11 @@ export default function PurchasePopUp({card, visibility, setVisibility}) {
     }
 
     const handleNo = () => {
-        setVisibility("none")
+        setPopUpPosition("0")
+        setTimeout(() => setVisibility("none"), 200)
     }
     return (
-        <div className="purchase-pop-up" style={{display: `${visibility}`}}>
+        <div className="purchase-pop-up" style={{display: `${visibility}`, transform: `translateY(${popUpPosition})`}}>
             <div className="question">Purchase "{card.cardname}"<br /> for {card.price} E-Coin?</div>
             <div className="answer">
                 <button className="choice no" onClick={handleNo}>No</button>
