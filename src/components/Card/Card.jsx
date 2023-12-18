@@ -41,7 +41,7 @@ export default function Card({card}) {
                 </div>
                 <div className="front-face" style={{backgroundImage: `url(${card.image})`}}>
                     <h4 className="card-power">{card.power}</h4>
-                    <PurchasePopUp card={card} visibility={purchasePopUpVisibility} />
+                    <PurchasePopUp card={card} visibility={purchasePopUpVisibility} setVisibility={setpurchasePopUpVisibility} />
                     <h3 className="card-name">{card.cardname}</h3>
                 </div>
             </div>
