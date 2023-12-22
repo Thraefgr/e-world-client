@@ -8,7 +8,7 @@
     background-color: #f2f2d7;
     gap: 0.5rem;
     box-shadow: 0.2rem 0.2rem 0.2rem black;
-    transition: all 1s;
+    animation: slide-down 0.5s linear 0s 1 forwards;
 }
 
 .question {
@@ -45,4 +45,13 @@
 .yes:hover {
     background-color: rgb(100, 255, 100);
     color: #0c0805;
+}
+
+@keyframes slide-down {
+    from {
+        top: 0%;
+    }
+    to {
+        top: 50%;
+    }
 }

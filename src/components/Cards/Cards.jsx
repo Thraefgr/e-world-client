@@ -17,7 +17,7 @@ export default function Cards({token}) {
 
     return (
         <section className="cards">
-            {cardList.map(card => <Card key={card.id} card={card} />)}
+            {cardList.map(card => <Card key={card.id} card={card} token={token}/>)}
         </section>
     )
 }
