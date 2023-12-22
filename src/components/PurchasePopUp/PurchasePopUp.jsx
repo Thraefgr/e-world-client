@@ -1,10 +1,10 @@
 import { useState } from "react"
 import "./PurchasePopUp.css"
 
-export default function PurchasePopUp({card, visibility, setVisibility, popUpPosition, setPopUpPosition}) {
+export default function PurchasePopUp({token, card, visibility, setVisibility, popUpPosition, setPopUpPosition}) {
     const bodyParam = {
-        username: "buyer",
-        cardname: "Emiruto"
+        username: "buyer6",
+        cardname: `${card.cardname}`
     }
     const [noAnimation, setNoAnimation] = useState("")
     const handleYes = () => {
@@ -12,10 +12,11 @@ export default function PurchasePopUp({card, visibility, setVisibility, popUpPos
             method: "POST",
             headers: {
                 "Content-type": "application/json",
-                "Authorization": "Token 38adab0e4a81f003456b2e1fbcad58e92c8d74cf"
+                "Authorization": `${token}`
             },
             body: JSON.stringify(bodyParam)
-        }).then(response => response.json()).then(data => setVisibility("none"))
+        })
+        .then(response => response.json())
     }
 
     const handleNo = () => {

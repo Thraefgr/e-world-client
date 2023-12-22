@@ -13,7 +13,7 @@ export default function Cards({token}) {
         })
         .then(response => response.json())
         .then(data => setCardList(data))
-    }, [token])
+    }, [])
 
     return (
         <section className="cards">
