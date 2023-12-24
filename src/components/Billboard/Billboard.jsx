@@ -3,7 +3,7 @@ export default function Billboard() {
     return (
         <section className = "billboard">
             <h2 className="greeting">Welcome to EWorld, Adventurer!</h2>
-            <p className="summary">Where everybody is genetically almost identical but live in a very different story.</p>
+            <p className="summary">Where everybody is genetically almost identical but lives a very different story.</p>
             <p className="story"><span>...</span>
                 In the beginning, even before time was a thing, there was only void. Empty, endless void.
                 Out of that void the first being was born. It had no name, no identidy, no purpose.
