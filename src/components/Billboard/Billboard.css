@@ -40,3 +40,22 @@
     display: block;
     text-align: center;
 }
+
+@media (max-width : 1200px) {
+    .story {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .story {
+        width: 90%;
+        font-size: 1rem;
+    }
+    .greeting {
+        font-size: 3rem;
+    }
+    .summary {
+        font-size: 1.5rem;
+    }
+}

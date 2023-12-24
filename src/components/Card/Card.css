@@ -27,7 +27,6 @@
 }
 
 .front-face {
-    background-image: url(./front.png);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,7 +47,6 @@
 }
 
 .back-face {
-    background-image: url(./back.png);
     color: #f2f2d7;
     transform: rotateY(180deg);
 }
