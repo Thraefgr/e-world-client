@@ -1,0 +1,57 @@
+.purchase-pop-up {
+    display: none;
+    position: absolute;
+    width: inherit;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    flex-direction: column;
+    background-color: #f2f2d7;
+    gap: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem black;
+    animation: slide-down 0.5s linear 0s 1 forwards;
+}
+
+.question {
+    color: #0c0805;
+}
+
+.answer {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.choice {
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    color: #f2f2d7;
+    transition: all 0.5s;
+}
+
+.yes {
+    background-color: darkgreen;
+}
+
+.no {
+    background-color: darkred;
+}
+
+.no:hover {
+    background-color: rgb(255, 100, 100);
+    color: #0c0805;
+}
+
+.yes:hover {
+    background-color: rgb(100, 255, 100);
+    color: #0c0805;
+}
+
+@keyframes slide-down {
+    from {
+        top: 0%;
+    }
+    to {
+        top: 50%;
+    }
+}
