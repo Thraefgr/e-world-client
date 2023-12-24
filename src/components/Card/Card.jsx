@@ -49,7 +49,7 @@ export default function Card({card, token, userName}) {
     return (
         <div className="card">
             <div className="card-faces" style={cardRotationStyle}>
-                <div className="back-face">
+                <div className="back-face" style={{backgroundImage: `url(${card.faction})`}}>
                     <p>{card.detail}</p>
                 </div>
                 <div className="front-face" style={{backgroundImage: `url(${card.image})`}}>

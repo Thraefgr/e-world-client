@@ -32,13 +32,18 @@
     justify-content: space-between;
 }
 
-.card-power, .card-name {
-    text-shadow: 0.15rem 0.15rem 0.1rem black;
+.back-face p, .card-name, .card-power {
+    background-color: rgba(0, 0, 0, 0.66);
+    border-radius: 0.2rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
     color: #f2f2d7;
 }
 
+
 .card-power {
     font-size: 2rem;
+    width: fit-content;
+    padding: 0.5rem 1rem;
 }
 
 .card-name {
@@ -47,7 +52,6 @@
 }
 
 .back-face {
-    color: #f2f2d7;
     transform: rotateY(180deg);
 }
 
