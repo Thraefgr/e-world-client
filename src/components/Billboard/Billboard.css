@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(./parc.jpg);
+    background-image: url(../../images/parc.jpg);
     background-size: cover;
     background-position: 10% 10% ;
     background-repeat: no-repeat;
