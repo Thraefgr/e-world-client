@@ -3,7 +3,7 @@ import { useState } from "react";
 import PurchasePopUp from "../PurchasePopUp/PurchasePopUp";
 import {useNavigate} from "react-router-dom";
 
-export default function Card({card, token}) {
+export default function Card({card, token, userName}) {
     const [purchasePopUpVisibility, setpurchasePopUpVisibility] = useState("none");
     const [cardRotation, setCardRotation] = useState(0);
     const [popUpPosition, setPopUpPosition] = useState(0);
@@ -54,7 +54,7 @@ export default function Card({card, token}) {
                 </div>
                 <div className="front-face" style={{backgroundImage: `url(${card.image})`}}>
                     <h4 className="card-power">{card.power}</h4>
-                    <PurchasePopUp token={token} card={card} visibility={purchasePopUpVisibility} setVisibility={setpurchasePopUpVisibility} popUpPosition={popUpPosition} setPopUpPosition={setPopUpPosition}/>
+                    <PurchasePopUp token={token} userName={userName} card={card} visibility={purchasePopUpVisibility} setVisibility={setpurchasePopUpVisibility} popUpPosition={popUpPosition} setPopUpPosition={setPopUpPosition}/>
                     <h3 className="card-name">{card.cardname}</h3>
                 </div>
             </div>

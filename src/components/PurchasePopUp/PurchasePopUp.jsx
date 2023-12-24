@@ -1,9 +1,9 @@
 import { useState } from "react"
 import "./PurchasePopUp.css"
 
-export default function PurchasePopUp({token, card, visibility, setVisibility, popUpPosition, setPopUpPosition}) {
+export default function PurchasePopUp({token, card, visibility, setVisibility, userName}) {
     const bodyParam = {
-        username: "buyer6",
+        username: `${userName}`,
         cardname: `${card.cardname}`
     }
     const [noAnimation, setNoAnimation] = useState("")
@@ -17,10 +17,11 @@ export default function PurchasePopUp({token, card, visibility, setVisibility, p
             body: JSON.stringify(bodyParam)
         })
         .then(response => response.json())
+        .then(() => window.location.reload())
     }
 
     const handleNo = () => {
-        setVisibility("none")
+        setVisibility("none");
     }
     return (
         <div className={"purchase-pop-up" + noAnimation} style={{display: `${visibility}`}}>
