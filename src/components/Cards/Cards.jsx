@@ -12,6 +12,7 @@ export default function Cards({token, userName}) {
         })
         .then(response => response.json())
         .then(data => setCardList(data))
+        .catch(err => console.log(err))
     }, [])
 
     return (
