@@ -1,8 +1,10 @@
 .card {
     width: 300px;
     perspective: 1080px;
-    box-shadow: 0.5rem 0.5rem 0.4rem black;
+    box-shadow: 0.5rem 0.5rem 0.5rem black;
     border-radius: 1rem 1rem 0 0;
+    transition: all 0.5s;
+
 }
 
 .card-faces {
@@ -80,4 +82,9 @@
 
 .card-button svg {
     fill: #f2f2d7;
+}
+
+.card:hover {
+    box-shadow: 1rem 1rem 1rem white;
+    cursor: pointer;
 }
