@@ -1,0 +1,42 @@
+.billboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./parc.jpg);
+    background-size: cover;
+    background-position: 10% 10% ;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 2rem;
+    gap: 1rem;
+    height: 100vh;
+    box-shadow: 1rem 1rem 1rem black inset, -1rem -1rem 1rem black inset;
+}
+
+.billboard >*, .story span {
+    color: #0c0805;
+    font-weight: 600;
+}
+
+.greeting {
+    font-size: 4rem;
+    margin-top: 3%;
+    width: 90%;
+}
+
+.summary {
+    font-size: 2rem;
+    width: 90%;
+}
+
+.story {
+    font-size: 1.5rem;
+    text-align: left;
+    width: 60%;
+    overflow: auto;
+}
+
+.story span {
+    display: block;
+    text-align: center;
+}
