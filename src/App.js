@@ -15,6 +15,7 @@ function App() {
         <Route path="account" element={<h2>Welcome to Account Page!</h2>} />
         <Route path="inventory" element={<h2>Welcome to Inventory Page!</h2>} />
         <Route path="login" element={<h2>Welcome to Login Page!</h2>} />
+        <Route path="register" element={<h2>Welcome to Register Page!</h2>} />
       </Route>
     </Routes>
   );
