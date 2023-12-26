@@ -1,3 +1,4 @@
+import "./Inventory.css";
 import { useState, useEffect } from "react";
 import InventoryCard from "../../components/InventoryCard/InventoryCard.jsx";
 
@@ -16,7 +17,7 @@ export default function Inventory({userName, token}) {
     return (
         <main className = "inventory">
             {
-                ownedCards.map(() => <InventoryCard key={card.id} card={card}/>)
+                ownedCards.map((card) => <InventoryCard key={card.id} card={card}/>)
             }
         </main>
     )
