@@ -5,7 +5,6 @@ export default function InventoryCard({card}) {
         <div className="inventory-card">
             <div className="inventory-card-faces">
                 <div className="inventory-back-face" style={{backgroundImage: `url(${card.faction})`}}>
-                    <p>{card.detail}</p>
                 </div>
                 <div className="inventory-front-face" style={{backgroundImage: `url(${card.image})`}}>
                     <h4 className="inventory-card-power">{card.power}</h4>
