@@ -15,7 +15,7 @@ function App() {
       <Route path="/" element={<Layout token={token} />}>
         <Route index element={<Home token={token} userName={userName}/>} />
         <Route path="world" element={<h2>Welcome to World Page!</h2>} />
-        <Route path="account" element={<UserUpdate/>} />
+        <Route path="account" element={<UserUpdate token={token} userName={userName}/>} />
         <Route path="inventory" element={<h2>Welcome to Inventory Page!</h2>} />
         <Route path="login" element={<Login/>} />
         <Route path="register" element={<Register/>} />

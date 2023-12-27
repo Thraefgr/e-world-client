@@ -1,15 +1,21 @@
 import React, { useState } from 'react'
 import "./Register.css";
+import "../Home/Home"
 import topLeft from "../../images/topLeft.png"
 import topRight from "../../images/topRight.png"
 import bottomLeft from "../../images/bottomLeft.png"
 import bottomRight from "../../images/bottomRight.png"
+import { unstable_HistoryRouter, useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [username,setUsername]=useState("")
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
     const [password2,setPassword2]=useState("")
+    const [data,setData]=useState([]);
+
+    const navigate=useNavigate();
+
     
     const handleInputChangeUsername = (e) => {
         setUsername(e.target.value);
@@ -24,25 +30,52 @@ const Register = () => {
         setPassword2(e.target.value);
       };
 
-    const body=
-        {
+    
+
+    const handleSubmit = async(e) => {
+            e.preventDefault();
+            const body=
+            {
             "username":`${username}`,
             "email":`${email}`,
             "password":`${password}`,
             "password2":`${password2}`
-        }
+            }
+            try {
+              const response = await fetch('http://127.0.0.1:8000/user/register/', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body),
+              });
+        
+              if (response.ok) {
+                // navigate("/");
+                setData(response)
+                console.log("RESPONSE: ",response)
+              console.log("DATAAAAAA GEL ARTIIKK DATAAAA: ",data);
+                localStorage.setItem("userName",`${username}`)
+                localStorage.setItem("token",'');
+                // window.location.reload();
+              } else {
+                console.error('Registration failed');
+              }
+            } catch (error) {
+              console.error('An error occurred:', error);
+            }
+          };
 
-    const handleSubmit = (e) => {
-            fetch('http://127.0.0.1:8000/user/register/', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(body), 
-            }).then(response => response.json())
-            .then(() => window.location.reload())
-
-    }
+            // fetch('http://127.0.0.1:8000/user/register/', {
+            //   method: 'POST',
+            //   headers: {
+            //     'Content-Type': 'application/json',
+            //   },
+            //   body: JSON.stringify(body), 
+            // }).then(response => response.json())
+            // .then(() => window.location.reload())
+            // .then(()=>navigate("/"))
+    
     
   return (
     <div className='register'>

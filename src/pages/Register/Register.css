@@ -84,6 +84,7 @@
     background: linear-gradient(144deg, #1a120b, #311913 50%, #1a120b);
     color: #fff;
     padding: 16px !important;
+    transition: all 0.4s ease;
   }
   
   .btn:hover {
@@ -91,7 +92,6 @@
     color: rgb(255, 255, 255);
     padding: 16px !important;
     cursor: pointer;
-    transition: all 0.4s ease;
   }
   .login #username{
     animation: bounce 1.1s;
