@@ -4,7 +4,7 @@ import Layout from  './pages/Layout/Layout.jsx'
 import Home from "./pages/Home/Home.jsx";
 import Inventory from './pages/Inventory/Inventory.jsx';
 
-function App() {1
+function App() {
   const token = localStorage.getItem("token");//Pass this token to your pages and components if you need to do something with user authenthication.
   const userName = localStorage.getItem("userName");
   const balance = localStorage.getItem("balance");
