@@ -1,0 +1,225 @@
+.user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.corner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.topStyle{
+    animation: bounce 0.9s;
+    width: 10rem;
+    height: 10rem;
+    margin: 30px 200px -60px 200px;
+}
+
+.bottomStyle{
+    animation: bounce 1.5s;
+    width: 10rem;
+    height: 10rem;
+    margin: 30px 200px 30px 200px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    color: #fff;
+    border-radius: 17px;
+    font-size: 1.5em;
+}
+
+.login h1{
+    animation: bounce 1s;
+    font-family:POE;
+    text-align: center;
+}
+.section{
+  display: flex;
+  flex-wrap: wrap;
+}
+.section1{
+  margin: 0.5rem;
+}
+.section2{
+  margin: 0.5rem;
+}
+.login #username,
+.login #firstname,
+.login #lastname,
+.login #email,
+.login #currentPassword,
+.login #newPassword,
+.login #newPassword2 {
+    opacity: 1;
+    display: block;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 13px 18px;
+    margin: 20px 0 0 0;
+    font-size: 0.8em;
+    border-radius: 100px;
+    background: #3c3c3c;
+    color: #e5e5cb;
+    font-family:HLS;
+}
+  
+.login input:focus {
+    animation: bounce 1s;
+  }
+
+.btnDel {
+    background: linear-gradient(144deg, #1a120b , 20%,#311913d0 50%,#1a120b );
+    color: rgb(255, 255, 255);
+    padding: 16px !important;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+  .btnDel:hover {
+    background: linear-gradient(144deg, #1a120b , 20%,#311913e1 50%,#1a120b );
+  }
+  
+.btnSave{
+  background: linear-gradient(144deg, #1a120b , 20%,rgba(18, 28, 18, 0.666) 50%,#1a120b );
+  color: rgb(255, 255, 255);
+  padding: 16px !important;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.btnSave:hover{
+  background: linear-gradient(144deg, #1a120b , 20%,rgba(18, 28, 18, 0.829) 50%,#1a120b );
+    
+}
+  .login #username{
+    animation: bounce 0.7s;
+    background-color: #211f1d;
+ 
+  }
+  .login #firstname{
+    animation: bounce 0.8s;
+    background-color: #211f1d;
+ 
+  }
+  .login #lastname{
+    animation: bounce 0.9s;
+    background-color: #211f1d;
+ 
+  }
+
+  .login #email{
+    animation: bounce 1s;
+    background-color: #211f1d;
+  }
+  .file-area {
+    width: 100%;
+    position: relative;
+    animation: bounce 0.7s;
+
+    margin: 20px 0 0 0;
+    font-size: 0.8em;
+    border-radius: 100px;
+    color: #e5e5cb;
+    font-family:HLS;
+    input[type=file] {
+        border-radius: 100px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+    
+    .file-dummy {
+      width: 100%;
+      color: #e5e5cb;
+      border-radius: 100px;
+      padding: 13px 18px;
+      background:  #211f1d;
+      border: 2px   #211f1d;
+      text-align: center;
+      transition: background 0.3s ease-in-out;
+      
+      .success {
+        display: none;
+      }
+    }
+    
+    &:hover .file-dummy {
+      background:  #211f1d;
+    }
+
+    
+    input[type=file]:valid + .file-dummy {
+      border-color: rgba(18, 28, 18, 0.666);
+      background-color: rgba(18, 28, 18, 0.666);
+  
+      .success {
+        display: inline-block;
+      }
+      .default {
+        display: none;
+      }
+    }
+  }
+  
+
+  .login #currentPassword{
+    animation: bounce1 0.8s;
+    background-color: #211f1d;
+  }
+  .login #newPassword{
+    animation: bounce1 0.9s;
+    background-color: #211f1d;
+  }
+  .login #newPassword2{
+    animation: bounce1 1s;
+    background-color: #211f1d;
+  }
+  
+
+  
+  @media only screen and (max-width: 600px) {
+    .login {
+      width: 70%;
+      padding: 3em;
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(-250px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes bounce1 {
+    0% {
+      opacity: 0;
+    }
+  
+    40% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes bounce2 {
+    0% {
+      opacity: 0;
+    }
+  
+    70% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }

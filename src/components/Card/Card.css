@@ -1,0 +1,92 @@
+.card {
+    width: 300px;
+    perspective: 1080px;
+    box-shadow: 0.5rem 0.5rem 0.5rem black;
+    border-radius: 1rem 1rem 0 0;
+    transition: all 0.5s;
+
+}
+
+.card-faces {
+    position: relative;
+    width: inherit;
+    height: 400px;
+    transition: all 1s;
+    transform-style: preserve-3d;
+}
+
+.front-face, .back-face {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    width: inherit;
+    height: inherit;
+    backface-visibility: hidden;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.front-face {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.back-face p, .card-name, .card-power {
+    background-color: rgba(0, 0, 0, 0.66);
+    border-radius: 0.2rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+    color: #f2f2d7;
+}
+
+
+.card-power {
+    font-size: 2rem;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+}
+
+.card-name {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.back-face {
+    transform: rotateY(180deg);
+}
+
+/*####################################### BUTTON STYLES #######################################*/
+
+.card-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-buttons > * {
+    flex: 1;
+    padding: 0.4rem;
+    background-color: #1a120b;;;
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s;
+    font-size: 1.1rem;
+    color: #f2f2d7;
+}
+
+.card-button:hover {
+    background-color: #f2f2d7;
+    color: #0c0805;
+}
+
+.card-button:hover svg {
+    fill: #0c0805;
+}
+
+.card-button svg {
+    fill: #f2f2d7;
+}
+
+.card:hover {
+    box-shadow: 1rem 1rem 1rem white;
+    cursor: pointer;
+}

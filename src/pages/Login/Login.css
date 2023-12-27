@@ -1,0 +1,154 @@
+.corner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.topStyle{
+    width: 10rem;
+    height: 10rem;
+    margin: 30px 50px -60px 50px;
+    animation: bounce 0.9s;
+}
+
+.bottomStyle{
+    animation: bounce1 1.4s;
+    width: 10rem;
+    height: 10rem;
+    margin: -55px 50px 30px 50px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    color: #fff;
+    border-radius: 17px;
+    font-size: 1.3em;
+}
+
+.login h1{
+    animation: bounce 1s;
+    font-family:POE;
+}
+
+.login p{
+    font-family:HLS;
+    margin: 1rem;
+    font-size: 0.9rem;
+    a{
+      font-family:HLS;
+      font-size: 0.9rem;
+    }
+}
+
+.login #username,
+.login #password {
+    opacity: 1;
+    display: block;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 13px 18px;
+    margin: 20px 0 0 0;
+    font-size: 0.8em;
+    border-radius: 100px;
+    background: #3c3c3c;
+    color: #e5e5cb;
+    font-family:HLS;
+}
+  
+.login input:focus {
+    animation: bounce 1s;
+  }
+  
+.login input[type=submit],
+.login input[type=button],
+.h1 {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 13px;
+    margin: 40px 0 0 0;
+    border-radius: 500px;
+    animation: bounce2 1.6s;
+    font-size: 1.5rem;
+    font-family:POE;
+  }
+  
+  .h1 {
+    padding: 0;
+    position: relative;
+    top: -35px;
+    display: block;
+    margin-bottom: -0px;
+    font-size: 2.7rem;
+  }
+ 
+.btn {
+    background: linear-gradient(144deg, #1a120b, #311913 50%, #1a120b);
+    color: #fff;
+    padding: 16px !important;
+  }
+  
+.btn:hover {
+    background: linear-gradient(144deg, #1a120b , 20%,#311913d0 50%,#1a120b );
+    color: rgb(255, 255, 255);
+    padding: 16px !important;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+  
+.login #username {
+    animation: bounce 1.1s;
+    background-color: #211f1d;
+
+}
+  
+.login #password {
+    animation: bounce1 1.2s;
+    background-color: #211f1d;
+}
+  
+.login p{
+    animation: bounce2 1.3s;
+}
+
+  
+@media only screen and (max-width: 600px) {
+  .login {
+      width: 70%;
+      padding: 3em;
+  }
+}
+  
+@keyframes bounce {
+    0% {
+      transform: translateY(-250px);
+      opacity: 0;
+    }
+}
+  
+@keyframes bounce1 {
+    0% {
+      opacity: 0;
+    }
+  
+    40% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+}
+  
+@keyframes bounce2 {
+    0% {
+      opacity: 0;
+    }
+  
+    70% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+}
