@@ -48,7 +48,7 @@ const Register = () => {
               if (response.ok) {
                 navigate("/");
                 localStorage.setItem("userName",data["username"])
-                localStorage.setItem("token",data["key"]);
+                localStorage.setItem("token","Token "+data["key"]);
                 window.location.reload();
               } else {
                 console.error('Registration failed');
@@ -67,7 +67,7 @@ const Register = () => {
         <div className='main'>
             <div className="login wrap">
                 <h1>REGISTER</h1>
-                <form onSubmit={handleSubmit}>
+                <form>
                     <input className='input'
                     placeholder="Username"
                         id="username"
@@ -86,7 +86,7 @@ const Register = () => {
                     />
                 <input className='input' placeholder="Password" id="password1" name="password" type="password" value={password} onChange={handleInputChangePassword}/>
                 <input className='input' placeholder="Confirm Password" id="password2" name="password" type="password" value={password2} onChange={handleInputChangePassword2}/>
-                <input value={"Submit"} className="btn" type="submit" />
+                <button value={"Submit"} className="btn" type="submit" onClick={handleSubmit}>Submit</button>
                 </form>
                 
             </div>

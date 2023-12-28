@@ -38,7 +38,7 @@ const Login = () => {
               navigate("/");
               console.log("DATAAAAAA GEL ARTIIKK DATAAAA: ",data);
               localStorage.setItem("userName",data["username"])
-              localStorage.setItem("token",data["key"])
+              localStorage.setItem("token","Token "+data["key"])
               window.location.reload();
             } else {
               console.error('Sign in failed');
@@ -58,8 +58,8 @@ const Login = () => {
         
         <div className='main'>
         <div className="login wrap">
-            <h1>LOGIN</h1>
-            <form onSubmit={handleSubmit}>
+            <h1>SIGN IN</h1>
+            <form >
                 <input className='input'
                     placeholder="Username"
                     autoComplete='username'
@@ -70,7 +70,7 @@ const Login = () => {
                     onChange={handleInputChangeUsername}
                 />
                 <input className='input' placeholder="Password" id="password" name="password" type="password" value={password} autoComplete="current-password" onChange={handleInputChangePassword}/>
-                <input value={"Submit"} className="btn" type="submit" />
+                <button value={"Submit"} className="btn" type="submit" onClick={handleSubmit}>Login</button>
             </form>
                 
                 <p>Dont you have an account? <Link to="/register">Sign Up</Link></p>
