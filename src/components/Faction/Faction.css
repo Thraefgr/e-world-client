@@ -5,6 +5,7 @@
     background-size: cover;
     background-position: center;
     padding: 1rem;
+    border-radius: 1rem;
     cursor: pointer;
 }
 
