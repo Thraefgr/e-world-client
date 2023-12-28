@@ -1,0 +1,4 @@
+.factions {
+    display: flex;
+    flex-wrap: wrap;
+}
