@@ -5,18 +5,15 @@ import topLeft from "../../images/topLeft.png"
 import topRight from "../../images/topRight.png"
 import bottomLeft from "../../images/bottomLeft.png"
 import bottomRight from "../../images/bottomRight.png"
-import { unstable_HistoryRouter, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [username,setUsername]=useState("")
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
     const [password2,setPassword2]=useState("")
-    const [data,setData]=useState([]);
-
     const navigate=useNavigate();
 
-    
     const handleInputChangeUsername = (e) => {
         setUsername(e.target.value);
       };
@@ -29,8 +26,6 @@ const Register = () => {
       const handleInputChangePassword2 = (e) => {
         setPassword2(e.target.value);
       };
-
-    
 
     const handleSubmit = async(e) => {
             e.preventDefault();
@@ -49,15 +44,12 @@ const Register = () => {
                 },
                 body: JSON.stringify(body),
               });
-        
+              const data= await response.json()
               if (response.ok) {
-                // navigate("/");
-                setData(response)
-                console.log("RESPONSE: ",response)
-              console.log("DATAAAAAA GEL ARTIIKK DATAAAA: ",data);
-                localStorage.setItem("userName",`${username}`)
-                localStorage.setItem("token",'');
-                // window.location.reload();
+                navigate("/");
+                localStorage.setItem("userName",data["username"])
+                localStorage.setItem("token",data["key"]);
+                window.location.reload();
               } else {
                 console.error('Registration failed');
               }
@@ -66,17 +58,6 @@ const Register = () => {
             }
           };
 
-            // fetch('http://127.0.0.1:8000/user/register/', {
-            //   method: 'POST',
-            //   headers: {
-            //     'Content-Type': 'application/json',
-            //   },
-            //   body: JSON.stringify(body), 
-            // }).then(response => response.json())
-            // .then(() => window.location.reload())
-            // .then(()=>navigate("/"))
-    
-    
   return (
     <div className='register'>
         <div className='corner'>
