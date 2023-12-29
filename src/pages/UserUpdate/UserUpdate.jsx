@@ -138,7 +138,6 @@ const UserUpdate = ({token,userName}) => {
             localStorage.setItem("token", "")
             localStorage.setItem("userName", "")
             navigate('/')
-            window.location.reload();
           } else {
             console.error('DELETE failed');
           }

@@ -17,7 +17,7 @@ function App() {
   //WARNING! Token we get from server is like this "38adab0e4a81f003456b2e1fbcad58e92c8d74cf" but we set token like this localStorage.setItem("token", "Token 38adab0e4a81f003456b2e1fbcad58e92c8d74cf")
   return (//Each "element prop" of routes will be replaced by page components like the first one.
     <Routes>
-      <Route path="/" element={<Layout token={token} balance={balance} profileImg={profileImg} />}>
+      <Route path="/" element={<Layout token={token} balance={balance} profileImg={profileImg} userName={userName} />}>
         <Route index element={<Home token={token} userName={userName}/>} />
         <Route path="world" element={<World />} />
         <Route path="inventory" element={<Inventory userName={userName} token={token} />} />

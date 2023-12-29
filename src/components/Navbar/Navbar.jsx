@@ -2,23 +2,45 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import profilepic from '../../images/profile-picture.jpg';
+import {useNavigate} from 'react-router-dom';
 
-const Navbar = ({ userName, token }) => {
+
+
+const Navbar = ({ userName, token ,balance,profileImg}) => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
-
     const handleDropdownToggle = () => {
         setDropdownOpen(!isDropdownOpen);
     };
-
-    const handleLogout = () => {
+    const navigate=useNavigate();
+    const handleLogout = async () => {
         // TODO: Logout işlemleri burada yapılabilir.
-        console.log("Logout");
+        try {
+            const response = await fetch(`http://127.0.0.1:8000/user/logout/`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                "Authorization": `${token}`
+              },
+            });
+            console.log(response.status);
+            if (response.status === 202) {
+              localStorage.removeItem("token")
+              localStorage.removeItem("userName")
+              localStorage.removeItem("balance")
+              localStorage.removeItem("profileImg")
+              navigate('/')
+              window.location.reload();
+            } else {
+              console.error('logout failed');
+            }
+          } catch (error) {
+            console.error('An error occurred:', error);
+          }
+        
     };
 
-    userName = 'Burak';
-    token = 0;
     return (
+        
         <nav className="navbar">
             <div className="left">
                 <div className="logo">
@@ -33,7 +55,7 @@ const Navbar = ({ userName, token }) => {
                 {token ? (
                     <div className="account-dropdown" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownToggle}>
                         <div className="profile-pic-container">
-                            <img src={profilepic} alt="Profile" className="profile-pic" />
+                            <img src={profileImg} alt="Profile" className="profile-pic" />
                             <h1>{userName}</h1>
                         </div>
                         {isDropdownOpen && (

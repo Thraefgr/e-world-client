@@ -36,9 +36,11 @@ const Login = () => {
             const data=await response.json();
             if (response.ok) {
               navigate("/");
-              console.log("DATAAAAAA GEL ARTIIKK DATAAAA: ",data);
               localStorage.setItem("userName",data["username"])
-              localStorage.setItem("token","Token "+data["key"])
+              localStorage.setItem("token","Token "+data["key"]);
+              localStorage.setItem("balance",data["balance"]);
+              localStorage.setItem("profileImg",data["profile_photo"]);
+              navigate("/");
               window.location.reload();
             } else {
               console.error('Sign in failed');

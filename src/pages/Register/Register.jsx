@@ -46,9 +46,11 @@ const Register = () => {
               });
               const data= await response.json()
               if (response.ok) {
-                navigate("/");
                 localStorage.setItem("userName",data["username"])
                 localStorage.setItem("token","Token "+data["key"]);
+                localStorage.setItem("balance",data["balance"]);
+                localStorage.setItem("profileImg",data["profile_photo"]);
+                navigate("/");
                 window.location.reload();
               } else {
                 console.error('Registration failed');
