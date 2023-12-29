@@ -1,6 +1,32 @@
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Added for horizontal centering */
+  /* Add other styles as needed */
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.cardDetail {
+  display: flex;
+  align-items: center;
+  /* Add other styles as needed */
+}
 .user{
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-around;
   align-items: center;
 }
 .corner{
@@ -13,14 +39,14 @@
     animation: bounce 0.9s;
     width: 10rem;
     height: 10rem;
-    margin: 30px 200px -60px 200px;
+    margin: 10px 30px -30px 30px;
 }
 
 .bottomStyle{
     animation: bounce 1.5s;
     width: 10rem;
     height: 10rem;
-    margin: 30px 200px 30px 200px;
+    margin: 10px 10px 30px 10px;
 }
 
 .main{
@@ -53,6 +79,7 @@
 .login #firstname,
 .login #lastname,
 .login #email,
+.login #file,
 .login #currentPassword,
 .login #newPassword,
 .login #newPassword2 {
@@ -63,7 +90,7 @@
     width: 100%;
     padding: 13px 18px;
     margin: 20px 0 0 0;
-    font-size: 0.8em;
+    font-size: 1.3rem;
     border-radius: 100px;
     background: #3c3c3c;
     color: #e5e5cb;
@@ -82,23 +109,30 @@
     color: rgb(255, 255, 255);
     padding: 16px !important;
     border-radius:  30px;
+    margin-top: 1rem;
     border: none;
     cursor: pointer;
     /* transition: all 0.4s ease; */
 }
 
   .btnDel:hover {
-    background: linear-gradient(144deg, #1a120b , 20%,#311913e1 50%,#1a120b );
+    background: linear-gradient(144deg, #1a120b , 20%,#3119138e 50%,#1a120b );
   }
   
 .btnSave{
+  font-family: POE;
+  font-size: 1.5rem;
   background: linear-gradient(144deg, #1a120b , 20%,rgba(16, 35, 16, 0.651) 50%,#1a120b );
   color: rgb(255, 255, 255);
   padding: 16px !important;
+  margin-top: 1rem;
   cursor: pointer;
   border-radius: 30px;
   border:none;
   width: 50%;
+  position: relative;
+    top: 50%;
+    left: 25%;
   /* transition: all 0.4s ease; */
 }
 .btnSave:hover{
@@ -125,62 +159,12 @@
     animation: bounce 1s;
     background-color: #211f1d;
   }
-  .file-area {
-    width: 100%;
-    position: relative;
-    animation: bounce 0.7s;
-
-    margin: 20px 0 0 0;
-    font-size: 0.8em;
-    border-radius: 100px;
-    color: #e5e5cb;
-    font-family:HLS;
-    input[type=file] {
-        border-radius: 100px;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0;
-      cursor: pointer;
-    }
+  .login #file{
+    animation: bounce 0.8s;
+    background-color: #211f1d;
     
-    .file-dummy {
-      width: 100%;
-      color: #e5e5cb;
-      border-radius: 100px;
-      padding: 13px 18px;
-      background:  #211f1d;
-      border: 2px   #211f1d;
-      text-align: center;
-      transition: background 0.3s ease-in-out;
-      
-      .success {
-        display: none;
-      }
-    }
-    
-    &:hover .file-dummy {
-      background:  #211f1d;
-    }
-
-    
-    input[type=file]:valid + .file-dummy {
-      border-color: rgba(18, 28, 18, 0.666);
-      background-color: rgba(18, 28, 18, 0.666);
-  
-      .success {
-        display: inline-block;
-      }
-      .default {
-        display: none;
-      }
-    }
   }
-  
+
 
   .login #currentPassword{
     animation: bounce1 0.8s;
@@ -197,22 +181,23 @@
   
   .cardDet {
     
-    background: #110c07a6;
-    padding: 1rem;
-    border-radius: 6px;
+    margin-left: 40px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #211f1d54;
     
 
   }
   .userHeader{
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
 
   }
   .card-image {
     background-color: rgb(236, 236, 236);
     width: 100%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
+    height: 13rem;
+    border-radius: 6px;
 
   }
   
@@ -224,7 +209,8 @@
   .heading {
     font-weight: 600;
     color: rgb(88, 87, 87);
-    padding: 7px;
+    padding: 10px;
+    margin-left: 1rem;
   }
   
   .heading:hover {

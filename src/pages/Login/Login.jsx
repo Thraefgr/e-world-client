@@ -50,7 +50,7 @@ const Login = () => {
         };
         
   return (
-    <div>
+    <div >
         <div className='corner'>
             <img src={topLeft} alt="" className='topStyle'/>
             <img src={topRight} alt="" className='topStyle'/>

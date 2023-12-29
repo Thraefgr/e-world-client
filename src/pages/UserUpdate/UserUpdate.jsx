@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./UserUpdate.css";
-import topLeft from "../../images/topLeft.png"
-import topRight from "../../images/topRight.png"
-import bottomLeft from "../../images/bottomLeft.png"
-import bottomRight from "../../images/bottomRight.png"
-import { json, useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const UserUpdate = ({token,userName}) => {
     const [data,setData]=useState([])
@@ -17,6 +13,8 @@ const UserUpdate = ({token,userName}) => {
     const [newPassword,setNewPassword]=useState("")
     const [confirmNewPassword,setConfirmNewPassword]=useState("")
     const navigate=useNavigate();
+
+    
 
     const handleInputChangeUsername = (e) => {
         setUsername(e.target.value);
@@ -74,11 +72,15 @@ const UserUpdate = ({token,userName}) => {
           console.error('An error occurred:', error);
         }
       };
+
       useEffect(() => {
         getData();
       }, [])
 
       
+      if (token === null || token === "") {
+        return <Navigate to="/"/>;
+      }
 
       const handleSubmit = async(e) => {
         if (e) {
@@ -147,11 +149,8 @@ const UserUpdate = ({token,userName}) => {
 
 
   return (
-    <div className='user'>
-        {/* <div className='corner'>
-            <img src={topLeft} alt="" className='topStyle'/>
-            <img src={topRight} alt="" className='topStyle'/>
-        </div> */}
+    <div className='centered'>
+      <div className='user'>
         <div className='main'>
             <div className="login wrap">
                 <h1>UPDATE</h1>
@@ -192,13 +191,8 @@ const UserUpdate = ({token,userName}) => {
                     />
                 </div>
                 <div className='section2'>
-                    {/* <div className="form-group file-area"> */}
-                        <input type="file" id="file" required="required" onChange={handleInputChangeFile}/>
-                        {/* <div className="file-dummy"> */}
-                        {/* <div className="success">{data["profile_photo"] ? data["profile_photo"] : "Please select some files"}</div> */}
-                        {/* <div className="default">{data["profile_photo"] ? data["profile_photo"] : "Please select some files"}</div> */}
-                        {/* </div> */}
-                    {/* </div> */}
+                        <input type="file" title="Choose file" id="file" required="required" onChange={handleInputChangeFile}/>
+                        
                     <input className='input' placeholder="Current Password" id="currentPassword" name="password" type="password" value={currentPassword} onChange={handleInputChangeCurrentPassword}/>
                     <input className='input' placeholder="New Password" id="newPassword" name="password" type="password" value={newPassword}
                     onChange={handleInputChangeNewPassword}/>
@@ -214,29 +208,23 @@ const UserUpdate = ({token,userName}) => {
             
         </div>
         <div className='cardDetail'>
-        <div className="cardDet">
-  <img className="card-image" src={data["profile_photo"]} />
-  <h3 className='userHeader'>{data["username"]}</h3>
-  <p className="heading">
-    {data["email"]}
-    </p>
-    <p className="heading">
-    {data["first_name"]?data["first_name"]:""}
-    </p>
-    <p className="heading">
-    {data["last_name"]?data["last_name"]:""}
-    </p>
-    
-    <button value={"Delete"}  className="btnDel" type="submit" onClick={deleteUser}>Delete</button>
-      
-</div>
-
+            <div className="cardDet">
+      <img className="card-image" src={data["profile_photo"]} />
+      <h3 className='userHeader'>{data["username"]}</h3>
+      <p className="heading">{data["first_name"]?data["first_name"]:""} {data["last_name"]?data["last_name"]:""}
+        
+        </p>
+        <p className="heading">
+        {data["email"]}
+        </p>
+        
+        <button value={"Delete"}  className="btnDel" type="submit" onClick={deleteUser}>Delete</button>
+            </div>
         </div>
-        {/* <div className='corner'>
-            <img src={bottomLeft} alt="" className='bottomStyle'/>
-            <img src={bottomRight} alt="" className='bottomStyle'/>
-        </div> */}
+          
     </div>
+    </div>
+    
   )
 }
 
