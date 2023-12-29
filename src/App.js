@@ -4,6 +4,7 @@ import Layout from  './pages/Layout/Layout.jsx'
 import Home from "./pages/Home/Home.jsx";
 import Inventory from './pages/Inventory/Inventory.jsx';
 import World from './pages/World/World.jsx';
+import Error from './pages/Error/Error.jsx';
 
 function App() {
   const token = localStorage.getItem("token");//Pass this token to your pages and components if you need to do something with user authenthication.
@@ -20,6 +21,7 @@ function App() {
         <Route path="inventory" element={<Inventory userName={userName} token={token} />} />
         <Route path="login" element={<h2>Welcome to Login Page!</h2>} />
         <Route path="register" element={<h2>Welcome to Register Page!</h2>} />
+        <Route path="*" element={<Error />} />
       </Route>
     </Routes>
   );
