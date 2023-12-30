@@ -1,0 +1,19 @@
+.story-box {
+    display: flex;
+    gap: 3rem;
+}
+
+.inventory-card-story {
+    width: 345px;
+    background-image: url(../../images/parchment.png);
+    background-position: center;
+    background-size: cover;
+    color: black;
+    font-weight: bold;
+}
+
+.inventory-card-story p {
+    color: black;
+    font-weight: bold;
+    padding: 1.5rem 3rem;
+}

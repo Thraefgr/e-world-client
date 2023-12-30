@@ -1,11 +1,11 @@
 import "./Home.css";
-import Billboard from "../../components/Billboard/Billboard.jsx";
+import Welcome from "../../components/Welcome/Welcome.jsx";
 import Cards from "../../components/Cards/Cards.jsx";
 
 export default function Home({token, userName}) {
     return (
         <main className="home">
-            <Billboard />
+            <Welcome />
             <Cards token={token} userName={userName}/>
         </main>
     )

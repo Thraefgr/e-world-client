@@ -47,6 +47,7 @@ const Login = () => {
     } catch (error) {
       console.error('An error occurred:', error);
     }
+
   };
 
   return (
@@ -72,6 +73,7 @@ const Login = () => {
             <input className='input' placeholder="Password" id="password" name="password" type="password" value={password} autoComplete="current-password" onChange={handleInputChangePassword} />
             <button value={"Submit"} className="btn" type="submit" onClick={handleSubmit}>Login</button>
           </form>
+
           <p>Dont you have an account? <Link to="/register">Sign Up</Link></p>
 
         </div>

@@ -1,0 +1,61 @@
+.inventory-card {
+    width: 300px;
+    perspective: 1080px;
+    box-shadow: 0.5rem 0.5rem 0.5rem black;
+    border-radius: 1rem;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.inventory-card-faces {
+    position: relative;
+    width: inherit;
+    height: 400px;
+    transition: all 1s;
+    transform-style: preserve-3d;
+    border-radius: 1rem;
+}
+
+.inventory-front-face, .inventory-back-face {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    width: inherit;
+    height: inherit;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+
+.inventory-front-face {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inventory-back-face p, .inventory-card-name, .inventory-card-power {
+    background-color: rgba(0, 0, 0, 0.66);
+    border-radius: 0.2rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+    color: #f2f2d7;
+}
+
+
+.inventory-card-power {
+    font-size: 2rem;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+}
+
+.inventory-card-name {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.inventory-back-face {
+    transform: rotateY(180deg);
+}
+
+.inventory-card:hover .inventory-card-faces{
+    transform: rotateY(180deg);
+}
