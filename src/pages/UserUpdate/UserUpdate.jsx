@@ -146,7 +146,7 @@ const UserUpdate = ({ token, userName }) => {
       if (response.status === 204) {
         localStorage.setItem("token", "")
         localStorage.setItem("userName", "")
-        navigate('/')
+        window.location.reload();
       } else {
         console.error('DELETE failed');
       }
