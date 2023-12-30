@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import {useNavigate} from 'react-router-dom';
-
+import coin from '../../images/coin.png'
 
 
 const Navbar = ({ userName, token ,balance,profileImg}) => {
@@ -11,7 +10,6 @@ const Navbar = ({ userName, token ,balance,profileImg}) => {
     const handleDropdownToggle = () => {
         setDropdownOpen(!isDropdownOpen);
     };
-    const navigate=useNavigate();
     const handleLogout = async () => {
         // TODO: Logout işlemleri burada yapılabilir.
         try {
@@ -28,7 +26,6 @@ const Navbar = ({ userName, token ,balance,profileImg}) => {
               localStorage.removeItem("userName")
               localStorage.removeItem("balance")
               localStorage.removeItem("profileImg")
-              navigate('/')
               window.location.reload();
             } else {
               console.error('logout failed');
@@ -53,6 +50,12 @@ const Navbar = ({ userName, token ,balance,profileImg}) => {
             </div>
             <div className="right">
                 {token ? (
+                    <div className='loggedin-right'>
+                        <div className='balance-container'>
+                            <h1>{balance}</h1>
+                            <img className='profile-pic' src={coin} alt="Money" />
+                            </div>
+                        
                     <div className="account-dropdown" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownToggle}>
                         <div className="profile-pic-container">
                             <img src={profileImg} alt="Profile" className="profile-pic" />
@@ -65,7 +68,7 @@ const Navbar = ({ userName, token ,balance,profileImg}) => {
                                 <span onClick={handleLogout}><h1>Logout</h1></span>
                             </div>
                         )}
-                    </div>
+                    </div></div>
                 ) : (
                     <Link to="/login" className="login-button"><h1>Login</h1></Link>
                 )}

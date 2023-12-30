@@ -114,3 +114,24 @@ body {
     align-items: center;
   }
   
+  .balance-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0px;
+    margin-right: 1.2em;
+    
+    
+  }
+  .balance-container h1{
+    display: inline-block;
+    bottom: 10px;
+    font-size: 2em;
+    margin-right: 10px;
+  }
+
+.loggedin-right{
+  display: flex;
+  align-items: center;
+}
