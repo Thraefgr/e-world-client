@@ -24,6 +24,7 @@ function App() {
         <Route path="account" element={<UserUpdate token={token} userName={userName}/>} />
         <Route path="login" element={<Login/>} />
         <Route path="register" element={<Register/>} />
+        <Route path="*" element={<Error />} />
       </Route>
     </Routes>
   );
