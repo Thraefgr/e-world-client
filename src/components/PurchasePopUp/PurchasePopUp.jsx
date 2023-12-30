@@ -17,6 +17,7 @@ export default function PurchasePopUp({token, card, visibility, setVisibility, u
             body: JSON.stringify(bodyParam)
         })
         .then(response => response.json())
+        .then(data => localStorage.setItem("balance", data["balance"]))
         .then(() => window.location.reload())
     }
 
