@@ -42,7 +42,16 @@ const Login = () => {
         navigate("/");
         window.location.reload();
       } else {
-        console.error('Sign in failed');
+        const alertBox = document.createElement('div');
+        alertBox.classList.add('alert', 'login-alert');
+        alertBox.innerHTML = `
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            ${data['message']} 
+          `;
+        document.body.appendChild(alertBox);
+        setTimeout(() => {
+          alertBox.style.display = 'none';
+        }, 3000);
       }
     } catch (error) {
       console.error('An error occurred:', error);
@@ -56,7 +65,10 @@ const Login = () => {
         <img src={topLeft} alt="" className='topStyle' />
         <img src={topRight} alt="" className='topStyle' />
       </div>
-
+      {/* <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        This is an alert box.
+      </div> */}
       <div className='main'>
         <div className="login wrap">
           <h1>SIGN IN</h1>

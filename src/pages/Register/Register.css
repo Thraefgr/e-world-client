@@ -1,3 +1,13 @@
+.register-alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  position: fixed;
+  top: 75px;
+  width: 500px;
+  margin-left: 42.1875%;
+  border-radius: 15px 15px 15px 15px;
+}
 
 .corner{
   display: flex;
