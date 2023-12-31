@@ -1,116 +1,137 @@
 body {
-    background-color: var(--background-color);
-    padding-top: 70px;
-  }
+  background-color: var(--background-color);
+  padding-top: 70px;
+}
+
+.navbar {
+  background-color: var(--background-color);
+  padding: 10px 20px;
+  color: var(--font-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.left, .nav-links, .right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 20px;
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.nav-links h1 {
+  margin-right: 20px;
+}
+
+.right a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: var(--font-color);
+  border-bottom: none;
+  font-size: 1.2em;
+}
+
+.login-button, .account-dropdown {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.login-button {
+  background: linear-gradient(144deg, #1a120b , 20%,#311913d0 50%,#1a120b );
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.account-dropdown {
+  position: relative;
+  margin-right: 100px;
+}
+
+.dropdown-content {
+  border: 2px solid var(--font-color);
+  border-radius: 5px;
+  margin-top: 19px;
+  margin-right: -2px;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: var(--background-color);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content a, .dropdown-content span {
+  margin: 5px 0;
+  color: var(--font-color);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.nav-links h1,
+.right a,
+.login-button,
+.dropdown-content a,
+.dropdown-content span,
+.account-dropdown {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+}
+
+.nav-links h1:hover,
+.right a:hover,
+.login-button:hover,
+.dropdown-content a:hover,
+.dropdown-content span:hover,
+.account-dropdown:hover {
+  border: 2px solid var(--font-color);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.profile-pic {
+  width: 30px; /* Ayarlamak istediğiniz boyuta göre değiştirin */
+  height: 30px; /* Ayarlamak istediğiniz boyuta göre değiştirin */
+  border-radius: 50%; /* Profil resminin yuvarlak olması için */
+  margin-right: 15px;
+}
+.profile-pic-container {
+  margin-right: 15px;
+  display: flex; /* Profil resmi ve Account yan yana olsun */
+  align-items: center;
+}
+
+.balance-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0px;
+  margin-right: 1.2em;
   
-  .navbar {
-    background-color: var(--background-color);
-    padding: 10px 20px;
-    color: var(--font-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
   
-  .left, .nav-links, .right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-right: 20px;
-    color: var(--font-color);
-    text-decoration: none;
-  }
-  
-  .nav-links h1 {
-    margin-right: 20px;
-  }
-  
-  .right a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: var(--font-color);
-    border-bottom: none;
-    font-size: 1.2em;
-  }
-  
-  .login-button, .account-dropdown {
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1.2em;
-  }
-  
-  .login-button {
-    background: linear-gradient(144deg, #1a120b , 20%,#311913d0 50%,#1a120b );
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .account-dropdown {
-    position: relative;
-    margin-right: 100px;
-  }
-  
-  .dropdown-content {
-    border: 2px solid var(--font-color);
-    border-radius: 5px;
-    margin-top: 19px;
-    margin-right: -2px;
-    position: absolute;
-    top: 30px;
-    right: 0;
-    background-color: var(--background-color);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .dropdown-content a, .dropdown-content span {
-    margin: 5px 0;
-    color: var(--font-color);
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-  
-  .nav-links h1,
-  .right a,
-  .login-button,
-  .dropdown-content a,
-  .dropdown-content span,
-  .account-dropdown {
-    display: inline-block;
-    padding: 10px;
-    position: relative;
-  }
-  
-  .nav-links h1:hover,
-  .right a:hover,
-  .login-button:hover,
-  .dropdown-content a:hover,
-  .dropdown-content span:hover,
-  .account-dropdown:hover {
-    border: 2px solid var(--font-color);
-    padding: 8px;
-    border-radius: 5px;
-  }
-  
-  .profile-pic {
-    width: 30px; /* Ayarlamak istediğiniz boyuta göre değiştirin */
-    height: 30px; /* Ayarlamak istediğiniz boyuta göre değiştirin */
-    border-radius: 50%; /* Profil resminin yuvarlak olması için */
-    margin-right: 15px;
-  }
-  .profile-pic-container {
-    margin-right: 15px;
-    display: flex; /* Profil resmi ve Account yan yana olsun */
-    align-items: center;
-  }
-  
+}
+.balance-container h1{
+  display: inline-block;
+  bottom: 10px;
+  font-size: 2em;
+  margin-right: 10px;
+}
+
+.loggedin-right{
+display: flex;
+align-items: center;
+}
