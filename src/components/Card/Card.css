@@ -38,6 +38,9 @@
     color: #f2f2d7;
 }
 
+.back-face p {
+    padding: 0.5rem;
+}
 
 .card-power {
     font-size: 2rem;
