@@ -3,10 +3,10 @@
   background-color: #f44336;
   color: white;
   position: fixed;
-  top: 75px;
-  width: 500px;
-  margin-left: 36.98%;
-  border-radius: 15px 15px 15px 15px;
+  top: 80px;
+  width: 490px;
+  right: 20px;
+  border-radius: 15px;
 }
 
 .corner{
