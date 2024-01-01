@@ -4,7 +4,7 @@ body {
 }
 
 .navbar {
-  background-color: var(--background-color);
+  background-color: #231a14;
   padding: 10px 20px;
   color: var(--font-color);
   display: flex;
@@ -57,6 +57,7 @@ body {
 .account-dropdown {
   position: relative;
   margin-right: 100px;
+  padding-right: 30px;
 }
 
 .dropdown-content {
@@ -84,22 +85,33 @@ body {
 .right a,
 .login-button,
 .dropdown-content a,
-.dropdown-content span,
+.dropdown-content span{
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+}
 .account-dropdown {
   display: inline-block;
   padding: 10px;
   position: relative;
+  padding-right: 32px;
 }
 
 .nav-links h1:hover,
 .right a:hover,
 .login-button:hover,
 .dropdown-content a:hover,
-.dropdown-content span:hover,
+.dropdown-content span:hover {
+  border: 2px solid var(--font-color);
+  padding: 8px;
+  border-radius: 5px;
+}
+
 .account-dropdown:hover {
   border: 2px solid var(--font-color);
   padding: 8px;
   border-radius: 5px;
+  padding-right: 30px;
 }
 
 .profile-pic {
@@ -134,4 +146,23 @@ body {
 .loggedin-right{
 display: flex;
 align-items: center;
+}
+
+.account-dropdown:hover .dropdown-content {
+display: flex; /* Dropdown açıkken görünür yapın */
+}
+
+.account-dropdown::after {
+content: '';
+position: absolute;
+top: 10px; /* Yukarıdan biraz yukarıda başlasın */
+right: 10px;
+border-width: 12px;
+border-style: solid;
+border-color: transparent transparent var(--font-color) transparent;
+transition: transform 0.3s ease-out; /* Animasyon eklendi */
+}
+
+.account-dropdown:hover::after {
+transform: rotate(180deg); /* Hover durumunda üçgeni aşağıya bakan hale getirin */
 }
