@@ -12,7 +12,6 @@ const UserUpdate = ({ token, userName }) => {
   const [currentPassword, setCurrentPassword] = useState("")
   const [newPassword, setNewPassword] = useState("")
   const [confirmNewPassword, setConfirmNewPassword] = useState("")
-  const navigate = useNavigate();
 
   const handleInputChangeUsername = (e) => {
     setUsername(e.target.value);
@@ -149,7 +148,7 @@ const UserUpdate = ({ token, userName }) => {
     } catch (error) {
       console.error('An error occurred:', error);
     }
-  };
+  }
 
   const deleteUser = async (e) => {
     try {
@@ -182,7 +181,7 @@ const UserUpdate = ({ token, userName }) => {
       <div className='user'>
         <div className='main'>
           <div className="login wrap">
-            <h1>UPDATE</h1>
+            <h1>ACCOUNT</h1>
             <form >
               <div className='section'>
                 <div className='section1'>
@@ -236,7 +235,7 @@ const UserUpdate = ({ token, userName }) => {
                     onChange={handleInputChangeConfirmNewPassword} />
                 </div>
               </div>
-              <button value={"Save"} className="btnSave" type="submit" onClick={handleSubmit}>Save</button>
+              <button value={"Save"} className="btnSave" type="submit" onClick={handleSubmit}>UPDATE</button>
             </form>
 
 

@@ -38,8 +38,11 @@
     color: #f2f2d7;
 }
 
+.back-face p {
+    padding: 0.5rem;
+}
 
-.card-power {
+.card-power, .card-price {
     font-size: 2rem;
     width: fit-content;
     padding: 0.5rem 1rem;
@@ -52,6 +55,25 @@
 
 .back-face {
     transform: rotateY(180deg);
+}
+
+.power-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-price {
+    background-color: rgb(242, 242, 215, 0.66);
+    color:#1a120b;
+    font-weight: bold;
+    border-radius: 1rem;
+    display: flex;
+    font-size: 1.75rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2rem;
+    border: 0.1rem solid rgb(26, 18, 11);
 }
 
 /*####################################### BUTTON STYLES #######################################*/
