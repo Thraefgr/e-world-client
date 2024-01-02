@@ -9,25 +9,32 @@
   border-radius: 15px;
 }
 
-.corner{
+.corner_top{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 1.8rem;
-  margin-bottom: 1.8rem;
+  margin-top: 2.5rem;
+  .topStyle{
+    animation: bounce 0.9s;
+    width: 10rem;
+    height: 10rem;
+    margin: 10px 60px 10px 60px;
+  }
 }
-.corner .topStyle{
-  animation: bounce 0.9s;
-  width: 10rem;
-  height: 10rem;
-  margin: 10px 60px 0px 60px;
+
+.corner_bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  .bottomStyle{
+    animation: bounce 1.5s;
+    width: 10rem;
+    height: 10rem;
+    margin: 10px 60px 10px 60px;
+  }
 }
-.corner .bottomStyle{
-  animation: bounce 1.5s;
-  width: 10rem;
-  height: 10rem;
-  margin: 0px 60px 10px 60px;
-}
+
 .main{
   display: flex;
   justify-content: center;

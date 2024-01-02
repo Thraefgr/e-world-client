@@ -61,7 +61,7 @@ const Login = () => {
 
   return (
     <div >
-      <div className='login-corner'>
+      <div className='login-corner_top'>
         <img src={topLeft} alt="" className='topStyle' />
         <img src={topRight} alt="" className='topStyle' />
       </div>
@@ -86,7 +86,9 @@ const Login = () => {
             <button value={"Submit"} className="btn" type="submit" onClick={handleSubmit}>Login</button>
           </form>
 
-          <p>Dont you have an account? <Link to="/register">Sign Up</Link></p>
+          <div class="center_text">
+            <p>Dont you have an account? <a href="/register">Register</a></p>
+          </div>
 
         </div>
       </div>

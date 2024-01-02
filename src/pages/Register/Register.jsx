@@ -104,7 +104,7 @@ const Register = () => {
 
   return (
     <div className='register'>
-      <div className='corner'>
+      <div className='corner_top'>
         <img src={topLeft} alt="" className='topStyle' />
         <img src={topRight} alt="" className='topStyle' />
       </div>
@@ -135,7 +135,7 @@ const Register = () => {
 
         </div>
       </div>
-      <div className='corner'>
+      <div className='corner_bottom'>
         <img src={bottomLeft} alt="" className='bottomStyle' />
         <img src={bottomRight} alt="" className='bottomStyle' />
       </div>
