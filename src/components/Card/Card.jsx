@@ -2,11 +2,11 @@ import "./Card.css";
 import { useState } from "react";
 import PurchasePopUp from "../PurchasePopUp/PurchasePopUp";
 import {useNavigate} from "react-router-dom";
+import eCoin from "../../images/eworld.png";
 
 export default function Card({card, token, userName}) {
     const [purchasePopUpVisibility, setpurchasePopUpVisibility] = useState("none");
     const [cardRotation, setCardRotation] = useState(0);
-    const [popUpPosition, setPopUpPosition] = useState(0);
     const navigate = useNavigate();
     let ownership = "Purchase";
     const cardRotationStyle = {
@@ -41,7 +41,7 @@ export default function Card({card, token, userName}) {
              <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
          </svg>)
 
-    if (card.price === 0) {
+    if (card.owned) {
         ownership = "Owned";
         handlePurchase = null;
     }
@@ -53,7 +53,11 @@ export default function Card({card, token, userName}) {
                     <p>{card.detail}</p>
                 </div>
                 <div className="front-face" style={{backgroundImage: `url(${card.image})`}}>
-                    <h4 className="card-power">{card.power}</h4>
+
+                    <div className="power-price-container">
+                        <h4 className="card-power">{card.power}</h4>
+                        <div className="card-price" title="Price of the card">{card.price}<img src={eCoin} alt="ecoin logo" width={32} height={32}/></div>
+                    </div>
                     <PurchasePopUp token={token} userName={userName} card={card} visibility={purchasePopUpVisibility} setVisibility={setpurchasePopUpVisibility}/>
                     <h3 className="card-name">{card.cardname}</h3>
                 </div>
