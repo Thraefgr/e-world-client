@@ -36,6 +36,7 @@ const Navbar = ({ userName, token, balance, profileImg }) => {
         }
 
     };
+    
 
     return (
 

@@ -1,50 +1,47 @@
-.login-alert {
-  padding: 20px;
-  background-color: #f44336;
-  color: white;
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  width: 300px;
-  border-radius: 15px;
-}
 
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.closebtn:hover {
-  color: black;
-}
-
-
-.corner {
+.login-corner {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
-.corner .topStyle {
+.login-corner  .topStyle {
   width: 10rem;
   height: 10rem;
   margin: 30px 30px 30px 30px;
   animation: bounce 0.9s;
 }
 
-.corner .bottomStyle {
+
+
+.login-corner .bottomStyle {
   animation: bounce1 1.4s;
   width: 10rem;
   height: 10rem;
   margin: 30px 30px 30px 30px;
 }
+.login-corner_bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.login-corner_bottom.topStyle {
+  width: 10rem;
+  height: 10rem;
+  margin: 30px 60px 30px 60px;
+  animation: bounce 0.9s;
+}
+
+.login-corner_bottom.bottomStyle {
+  animation: bounce1 1.4s;
+  width: 10rem;
+  height: 10rem;
+  margin: 30px 60px 30px 60px;
+}
+
 
 .main {
   margin-left: 4.5rem;
