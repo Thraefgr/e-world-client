@@ -1,33 +1,46 @@
-
-
-
-
-
-.corner{
+.login-corner {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 2rem;
-
-
-  
+  margin-top: 3rem;
 }
 
-.corner .topStyle{
+.login-corner  .topStyle {
   width: 10rem;
   height: 10rem;
   margin: 30px 30px 30px 30px;
   animation: bounce 0.9s;
 }
 
-.corner .bottomStyle{
+.login-corner .bottomStyle {
   animation: bounce1 1.4s;
   width: 10rem;
   height: 10rem;
   margin: 30px 30px 30px 30px;
 }
+.login-corner_bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
 
-.main{
+.login-corner_bottom.topStyle {
+  width: 10rem;
+  height: 10rem;
+  margin: 30px 60px 30px 60px;
+  animation: bounce 0.9s;
+}
+
+.login-corner_bottom.bottomStyle {
+  animation: bounce1 1.4s;
+  width: 10rem;
+  height: 10rem;
+  margin: 30px 60px 30px 60px;
+}
+
+
+.main {
   margin-left: 4.5rem;
   display: flex;
   justify-content: center;
@@ -39,17 +52,18 @@
   font-size: 1.3em;
 }
 
-.login h1{
+.login h1 {
   animation: bounce 1s;
-  font-family:POE;
+  font-family: POE;
 }
 
-.login p{
-  font-family:HLS;
+.login p {
+  font-family: HLS;
   margin: 1rem;
   font-size: 0.9rem;
-  a{
-    font-family:HLS;
+
+  a {
+    font-family: HLS;
     font-size: 0.9rem;
   }
 }
@@ -67,7 +81,7 @@
   border-radius: 100px;
   background: #3c3c3c;
   color: #e5e5cb;
-  font-family:HLS;
+  font-family: HLS;
 }
 
 .login input:focus {
@@ -85,7 +99,7 @@
   border-radius: 500px;
   animation: bounce2 1.6s;
   font-size: 1.5rem;
-  font-family:POE;
+  font-family: POE;
 }
 
 .h1 {
@@ -96,15 +110,16 @@
   margin-bottom: -0px;
   font-size: 2.7rem;
 }
+
 .btn {
   font-family: POE;
   font-size: 1.5rem;
   width: 100%;
-  background: linear-gradient(144deg, #1a120b , 20%,#311913d0 50%,#1a120b );
+  background: linear-gradient(144deg, #1a120b, 20%, #311913d0 50%, #1a120b);
   margin-top: 2rem;
   color: rgb(255, 255, 255);
   padding: 16px !important;
-  border-radius:  30px;
+  border-radius: 30px;
   border: none;
   cursor: pointer;
   /* transition: all 0.4s ease; */
@@ -121,7 +136,7 @@
   background-color: #211f1d;
 }
 
-.login p{
+.login p {
   animation: bounce2 1.3s;
 }
 

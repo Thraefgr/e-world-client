@@ -2,9 +2,11 @@ body {
     background-color: var(--background-color);
     padding-top: 70px;
   }
-  
+  .nav-links{
+    font-size: 1.2em;
+  }
   .navbar {
-    background-color: var(--background-color);
+    background-color: #1a120b;
     padding: 10px 20px;
     color: var(--font-color);
     display: flex;
@@ -22,7 +24,7 @@ body {
   }
   
   .logo {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     margin-right: 20px;
     color: var(--font-color);
@@ -68,7 +70,7 @@ body {
     position: absolute;
     top: 30px;
     right: 0;
-    background-color: var(--background-color);
+    background-color: #1a120b;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -160,10 +162,13 @@ body {
   border-width: 12px;
   border-style: solid;
   border-color: transparent transparent var(--font-color) transparent;
-  transition: transform 0.3s ease-out; /* Animasyon eklendi */
+  transition: 0.3s ease-out;
+ /* Animasyon eklendi */
 }
 
 .account-dropdown:hover::after {
   transform: rotate(180deg); /* Hover durumunda üçgeni aşağıya bakan hale getirin */
+  top: 20px; 
 }
+
 

@@ -52,7 +52,7 @@ const Login = () => {
 
   return (
     <div >
-      <div className='corner'>
+      <div className='login-corner'>
         <img src={topLeft} alt="" className='topStyle' />
         <img src={topRight} alt="" className='topStyle' />
       </div>
@@ -78,7 +78,7 @@ const Login = () => {
 
         </div>
       </div>
-      <div className='corner'>
+      <div className='login-corner_bottom'>
         <img src={bottomLeft} alt="" className='bottomStyle' />
         <img src={bottomRight} alt="" className='bottomStyle' />
       </div>
