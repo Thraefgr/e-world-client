@@ -1,3 +1,14 @@
+.login-alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  position: fixed;
+  top: 80px;
+  width: 350px;
+  right: 20px;
+  border-radius: 15px;
+}
+
 .center_text {
   text-align: center;
 }

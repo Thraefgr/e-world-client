@@ -1,6 +1,10 @@
 import React from 'react'
-import './Footer.css'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import './Footer.css'
 const Footer = () => {
     return (
         <div className='footer'>
@@ -9,38 +13,18 @@ const Footer = () => {
 
 
                     <div className='sb_footer-links_div'>
-                        <h2>Team</h2>
-                        <p>Ferhat Yenilmez</p>
-                        <p>Bünyamin Kalkan</p>
-                        <p>Barış Keskin</p>
-                        <p>Hilal Dedek</p>
-                        <p>Hamit Burak Koçtaş</p>
-                        <p>Umut Arif</p>
-                    </div>
-                    <div className='sb_footer-links_div'>
-                        <h2>Instagram</h2>
-                        <p>@gigachadFerhad</p>
-                        <p>@bnymn_klkn</p>
-                        <p>@keserbaros1</p>
-                        <p>@hilaldedek</p>
-                        <p>@hburakkoctas</p>
-                        <p>@_umut_arif</p>
-                    </div>
-                    <div className='sb_footer-links_div'>
-                        <h2>Linkedin</h2>
-                        <p>linkedin.com/ferhat-yenilmez/</p>
-                        <p>linkedin.com/bunyamin-kalkan/</p>
-                        <p>linkedin.com/keserbaros1/</p>
-                        <p>linkedin.com/hilal-dedek/</p>
-                        <p>linkedin.com/hamit-burak-koctas/</p>
-                        <p>linkedin.com/oumout-arif/</p>
-                        
+                        <h2>Follow us on :</h2>
+                        <div className='socialmedia'>
+                            <Link to='/dotnet'><FontAwesomeIcon className='footer_icon' icon={faInstagram} /></Link>
+                            <Link to='/dotnet'><FontAwesomeIcon className='footer_icon' icon={faFacebook} /></Link>
+                            <Link to='/dotnet'><FontAwesomeIcon className='footer_icon' icon={faLinkedin} /></Link>
+                        </div>
                     </div>
                     <div className='sb_footer-links_div'>
                         <h2>Github</h2>
-                        <p>https://github.com/Thraefgr/e-world-client</p>
+                        <a href="https://github.com/Thraefgr/e-world-client"><p>https://github.com/Thraefgr/e-world-client</p></a>
                         <br />
-                        <p>https://github.com/bunyaminkalkan/e-world-api</p>
+                        <a  href="https://github.com/bunyaminkalkan/e-world-api"><p>https://github.com/bunyaminkalkan/e-world-api</p></a>
                     </div>
 
                     <hr />
