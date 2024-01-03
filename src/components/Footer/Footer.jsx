@@ -1,6 +1,9 @@
 import React from 'react'
+import ig from '../../images/instagram.png'
+import fb from '../../images/facebook.jpg'
+import ln from '../../images/linkedin.png'
+import { Link } from 'react-router-dom'
 import './Footer.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Footer = () => {
     return (
         <div className='footer'>
@@ -9,38 +12,18 @@ const Footer = () => {
 
 
                     <div className='sb_footer-links_div'>
-                        <h2>Team</h2>
-                        <p>Ferhat Yenilmez</p>
-                        <p>Bünyamin Kalkan</p>
-                        <p>Barış Keskin</p>
-                        <p>Hilal Dedek</p>
-                        <p>Hamit Burak Koçtaş</p>
-                        <p>Umut Arif</p>
-                    </div>
-                    <div className='sb_footer-links_div'>
-                        <h2>Instagram</h2>
-                        <p>@gigachadFerhad</p>
-                        <p>@bnymn_klkn</p>
-                        <p>@keserbaros1</p>
-                        <p>@hilaldedek</p>
-                        <p>@hburakkoctas</p>
-                        <p>@_umut_arif</p>
-                    </div>
-                    <div className='sb_footer-links_div'>
-                        <h2>Linkedin</h2>
-                        <p>linkedin.com/ferhat-yenilmez/</p>
-                        <p>linkedin.com/bunyamin-kalkan/</p>
-                        <p>linkedin.com/keserbaros1/</p>
-                        <p>linkedin.com/hilal-dedek/</p>
-                        <p>linkedin.com/hamit-burak-koctas/</p>
-                        <p>linkedin.com/oumout-arif/</p>
-                        
+                        <h2>Follow us on :</h2>
+                        <div className='socialmedia'>
+                            <Link to='/dotnet'><img src={ig} alt="ig" /></Link>
+                            <Link to='/dotnet'><img src={fb} alt="fb" /></Link>
+                            <Link to='/dotnet'><img src={ln} alt="ln" /></Link>
+                        </div>
                     </div>
                     <div className='sb_footer-links_div'>
                         <h2>Github</h2>
-                        <p>https://github.com/Thraefgr/e-world-client</p>
+                        <a href="https://github.com/Thraefgr/e-world-client"><p>https://github.com/Thraefgr/e-world-client</p></a>
                         <br />
-                        <p>https://github.com/bunyaminkalkan/e-world-api</p>
+                        <a  href="https://github.com/bunyaminkalkan/e-world-api"><p>https://github.com/bunyaminkalkan/e-world-api</p></a>
                     </div>
 
                     <hr />

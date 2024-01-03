@@ -8,6 +8,7 @@ import Login from './pages/Login/Login.jsx';
 import Register from './pages/Register/Register.jsx';
 import UserUpdate from './pages/UserUpdate/UserUpdate.jsx';
 import Error from './pages/Error/Error.jsx';
+import Dotnet from './pages/Dotnet/Dotnet.jsx';
 
 function App() {
   const token = localStorage.getItem("token");//Pass this token to your pages and components if you need to do something with user authenthication.
@@ -24,6 +25,7 @@ function App() {
         <Route path="account" element={<UserUpdate token={token} userName={userName}/>} />
         <Route path="login" element={<Login/>} />
         <Route path="register" element={<Register/>} />
+        <Route path="dotnet" element={<Dotnet />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

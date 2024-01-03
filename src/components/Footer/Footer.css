@@ -31,8 +31,8 @@
     flex-direction: row;
 }
 .socialmedia img{
-    width: 80%;
-
+    width: 2rem;
+    margin: 1rem 1rem;
 }
 .sb_footer-links-div h2{
     font-size: 14px;
