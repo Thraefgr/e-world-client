@@ -1,8 +1,9 @@
 import React from 'react'
-import ig from '../../images/instagram.png'
-import fb from '../../images/facebook.jpg'
-import ln from '../../images/linkedin.png'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './Footer.css'
 const Footer = () => {
     return (
@@ -14,9 +15,9 @@ const Footer = () => {
                     <div className='sb_footer-links_div'>
                         <h2>Follow us on :</h2>
                         <div className='socialmedia'>
-                            <Link to='/dotnet'><img src={ig} alt="ig" /></Link>
-                            <Link to='/dotnet'><img src={fb} alt="fb" /></Link>
-                            <Link to='/dotnet'><img src={ln} alt="ln" /></Link>
+                            <Link to='/dotnet'><FontAwesomeIcon className='footer_icon' icon={faInstagram} /></Link>
+                            <Link to='/dotnet'><FontAwesomeIcon className='footer_icon' icon={faFacebook} /></Link>
+                            <Link to='/dotnet'><FontAwesomeIcon className='footer_icon' icon={faLinkedin} /></Link>
                         </div>
                     </div>
                     <div className='sb_footer-links_div'>
