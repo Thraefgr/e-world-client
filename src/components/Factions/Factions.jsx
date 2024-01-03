@@ -7,6 +7,7 @@ export default function Factions() {
         fetch("http://127.0.0.1:8000/factions/")
         .then(res => res.json())
         .then(data => setFactions(data))
+        .catch(err => console.log(err))
     }, [])
     return (
         <section className="factions">

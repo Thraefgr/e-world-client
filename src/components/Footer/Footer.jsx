@@ -22,9 +22,9 @@ const Footer = () => {
                     </div>
                     <div className='sb_footer-links_div'>
                         <h2>Github</h2>
-                        <a href="https://github.com/Thraefgr/e-world-client"><p>https://github.com/Thraefgr/e-world-client</p></a>
+                        <a href="https://github.com/Thraefgr/e-world-client" target='_blank' rel="noreferrer"><p>https://github.com/Thraefgr/e-world-client</p></a>
                         <br />
-                        <a  href="https://github.com/bunyaminkalkan/e-world-api"><p>https://github.com/bunyaminkalkan/e-world-api</p></a>
+                        <a  href="https://github.com/bunyaminkalkan/e-world-api" target='_blank' rel="noreferrer"><p>https://github.com/bunyaminkalkan/e-world-api</p></a>
                     </div>
 
                     <hr />
