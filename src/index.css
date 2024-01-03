@@ -9,7 +9,7 @@
 }
 
 :root { /* Core variables for the project*/
-    --background-color: #1a120b;
+    --background-color:#100e0b;
     --font-color: #e5e5cb;
     --heading-font: POE;
     --text-font: HLS;
@@ -23,9 +23,6 @@
     color: var(--font-color);
 }
 
-body {
-    background-color: var(--background-color);/*https://colorhunt.co/palette/1c0a00361500603601cc9544 theme link.*/
-}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
