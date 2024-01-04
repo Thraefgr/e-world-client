@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../../images/logo 6.png';
+import logo from '../../images/logo 8-3.png';
 import coin from '../../images/ecoin.png';
 
 
