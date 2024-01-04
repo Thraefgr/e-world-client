@@ -2,7 +2,7 @@ import "./Card.css";
 import { useState } from "react";
 import PurchasePopUp from "../PurchasePopUp/PurchasePopUp";
 import {useNavigate} from "react-router-dom";
-import eCoin from "../../images/eworld.png";
+import eCoin from "../../images/ecoin.png";
 
 export default function Card({card, token, userName}) {
     const [purchasePopUpVisibility, setpurchasePopUpVisibility] = useState("none");

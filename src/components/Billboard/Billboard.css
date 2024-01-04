@@ -4,7 +4,7 @@
     align-items: center;
     background-image: url(../../images/parc.jpg);
     background-size: cover;
-    background-position: 10% 10% ;
+    background-position: center;
     background-repeat: no-repeat;
     text-align: center;
     padding: 2rem;
@@ -20,7 +20,7 @@
 
 .greeting {
     font-size: 4rem;
-    margin-top: 3%;
+    margin-top: 5%;
     width: 90%;
 }
 
