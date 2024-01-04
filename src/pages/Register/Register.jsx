@@ -53,7 +53,49 @@ const Register = () => {
         navigate("/");
         window.location.reload();
       } else {
-        console.error('Registration failed');
+        const alertBox = document.createElement('div');
+        alertBox.classList.add('alert', 'register-alert');
+        alertBox.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>`
+        if (data['username']) {
+          if (data['username'][0].startsWith('This')) {
+            const modifiedUsername = `Username${data['username'][0].slice(4)}`;
+            alertBox.innerHTML += `${modifiedUsername}<br>`;
+          } else {
+            alertBox.innerHTML += `${data['username']}<br>`;
+          }
+        }
+        if (data['email']) {
+          if (data['email'][0].startsWith('This')) {
+            const modifiedEmail = `Email${data['email'][0].slice(4)}`;
+            alertBox.innerHTML += `${modifiedEmail}<br>`;
+          } else {
+            alertBox.innerHTML += `${data['email']}<br>`;
+          }
+        }
+        if (data['password']) {
+          if (data['password'][0].startsWith('This')) {
+            const modifiedPassword = `Password${data['password'][0].slice(4)}`;
+            alertBox.innerHTML += `${modifiedPassword}<br>`;
+          } else {
+            if (data['password'][0]) {
+              alertBox.innerHTML += `${data['password'][0]}<br>`
+            }
+            if (data['password'][1]) {
+              alertBox.innerHTML += `${data['password'][1]}<br>`
+            }
+          }
+        }
+        if (data['password2']) {
+          if (data['password2'][0].startsWith('This')) {
+            const modifiedPassword2 = `Confirm Password${data['password2'][0].slice(4)}`;
+            alertBox.innerHTML += `${modifiedPassword2}<br>`;
+          }
+        }
+        
+        document.body.appendChild(alertBox);
+        setTimeout(() => {
+          alertBox.style.display = 'none';
+        }, 6000);
       }
     } catch (error) {
       console.error('An error occurred:', error);
@@ -62,7 +104,7 @@ const Register = () => {
 
   return (
     <div className='register'>
-      <div className='corner'>
+      <div className='corner_top'>
         <img src={topLeft} alt="" className='topStyle' />
         <img src={topRight} alt="" className='topStyle' />
       </div>
@@ -93,7 +135,7 @@ const Register = () => {
 
         </div>
       </div>
-      <div className='corner'>
+      <div className='corner_bottom'>
         <img src={bottomLeft} alt="" className='bottomStyle' />
         <img src={bottomRight} alt="" className='bottomStyle' />
       </div>

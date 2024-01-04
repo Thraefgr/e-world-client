@@ -12,7 +12,6 @@ const UserUpdate = ({ token, userName }) => {
   const [currentPassword, setCurrentPassword] = useState("")
   const [newPassword, setNewPassword] = useState("")
   const [confirmNewPassword, setConfirmNewPassword] = useState("")
-  const navigate = useNavigate();
 
   const handleInputChangeUsername = (e) => {
     setUsername(e.target.value);
@@ -125,13 +124,31 @@ const UserUpdate = ({ token, userName }) => {
         localStorage.setItem('userName', data["username"])
         window.location.reload();
       } else {
-        console.log(data);
-        console.error('Update failed');
+        const alertBox = document.createElement('div');
+        alertBox.classList.add('alert', 'register-alert');
+        alertBox.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>`
+        
+        if (data['message']) {
+          alertBox.innerHTML += `${data['message']}<br>`
+          console.log(data['message'])
+        }
+        if (data['new_password']) {
+          if (data['new_password'][0]) {
+            alertBox.innerHTML += `${data['new_password'][0]}<br>`
+          }
+          if (data['new_password'][1]) {
+            alertBox.innerHTML += `${data['new_password'][1]}<br>`
+          }
+        }
+        document.body.appendChild(alertBox);
+        setTimeout(() => {
+          alertBox.style.display = 'none';
+        }, 3000);
       }
     } catch (error) {
       console.error('An error occurred:', error);
     }
-  };
+  }
 
   const deleteUser = async (e) => {
     try {
@@ -144,8 +161,12 @@ const UserUpdate = ({ token, userName }) => {
       });
       console.log(response.status);
       if (response.status === 204) {
-        localStorage.setItem("token", "")
-        localStorage.setItem("userName", "")
+        localStorage.removeItem("token");
+        localStorage.removeItem("userName");
+        localStorage.removeItem("profileImg");
+        localStorage.removeItem("balance");
+        localStorage.setItem("alert", "true");
+        console.log(localStorage.getItem("alert"))
         window.location.reload();
       } else {
         console.error('DELETE failed');
@@ -160,7 +181,7 @@ const UserUpdate = ({ token, userName }) => {
       <div className='user'>
         <div className='main'>
           <div className="login wrap">
-            <h1>UPDATE</h1>
+            <h1>ACCOUNT</h1>
             <form >
               <div className='section'>
                 <div className='section1'>
@@ -214,7 +235,7 @@ const UserUpdate = ({ token, userName }) => {
                     onChange={handleInputChangeConfirmNewPassword} />
                 </div>
               </div>
-              <button value={"Save"} className="btnSave" type="submit" onClick={handleSubmit}>Save</button>
+              <button value={"Save"} className="btnSave" type="submit" onClick={handleSubmit}>UPDATE</button>
             </form>
 
 

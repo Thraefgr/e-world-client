@@ -1,42 +1,52 @@
-.login-corner {
+.login-alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  position: fixed;
+  top: 80px;
+  width: 350px;
+  right: 20px;
+  border-radius: 15px;
+}
+
+.center_text {
+  text-align: center;
+}
+
+.center_text p {
+  font-family: HLS;
+  margin: 1rem;
+  font-size: 0.9rem;
+  a {
+    font-family: HLS;
+    font-size: 0.9rem;
+  }
+}
+
+.login-corner_top {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 5.1rem;
+  .topStyle {
+    width: 10rem;
+    height: 10rem;
+    margin: 10px 60px 10px 60px;
+    animation: bounce 0.9s;
+  }
 }
 
-.login-corner  .topStyle {
-  width: 10rem;
-  height: 10rem;
-  margin: 30px 30px 30px 30px;
-  animation: bounce 0.9s;
-}
-
-.login-corner .bottomStyle {
-  animation: bounce1 1.4s;
-  width: 10rem;
-  height: 10rem;
-  margin: 30px 30px 30px 30px;
-}
 .login-corner_bottom {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 3rem;
-}
-
-.login-corner_bottom.topStyle {
-  width: 10rem;
-  height: 10rem;
-  margin: 30px 60px 30px 60px;
-  animation: bounce 0.9s;
-}
-
-.login-corner_bottom.bottomStyle {
-  animation: bounce1 1.4s;
-  width: 10rem;
-  height: 10rem;
-  margin: 30px 60px 30px 60px;
+  margin-bottom: 5.1rem;
+  .bottomStyle {
+    animation: bounce1 1.4s;
+    width: 10rem;
+    height: 10rem;
+    margin: 10px 60px 10px 60px;
+  }
 }
 
 
@@ -55,17 +65,6 @@
 .login h1 {
   animation: bounce 1s;
   font-family: POE;
-}
-
-.login p {
-  font-family: HLS;
-  margin: 1rem;
-  font-size: 0.9rem;
-
-  a {
-    font-family: HLS;
-    font-size: 0.9rem;
-  }
 }
 
 .login #username,

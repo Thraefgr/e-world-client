@@ -123,14 +123,14 @@ body {
   }
 
   .profile-pic {
-    width: 30px; /* Ayarlamak istediğiniz boyuta göre değiştirin */
-    height: 30px; /* Ayarlamak istediğiniz boyuta göre değiştirin */
-    border-radius: 50%; /* Profil resminin yuvarlak olması için */
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
     margin-right: 15px;
   }
   .profile-pic-container {
     margin-right: 15px;
-    display: flex; /* Profil resmi ve Account yan yana olsun */
+    display: flex;
     align-items: center;
   }
   
@@ -157,24 +157,22 @@ body {
 }
 
 .account-dropdown:hover .dropdown-content {
-  display: flex; /* Dropdown açıkken görünür yapın */
+  display: flex; 
 }
 
 .account-dropdown::after {
   content: '';
   position: absolute;
-  top: 10px; /* Yukarıdan biraz yukarıda başlasın */
+  top: 10px;
   right: 10px;
   border-width: 12px;
   border-style: solid;
   border-color: transparent transparent var(--font-color) transparent;
   transition: 0.3s ease-out;
- /* Animasyon eklendi */
 }
 
 .account-dropdown:hover::after {
-  transform: rotate(180deg); /* Hover durumunda üçgeni aşağıya bakan hale getirin */
+  transform: rotate(180deg);
   top: 20px; 
 }
-
 

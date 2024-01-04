@@ -16,9 +16,28 @@ export default function PurchasePopUp({token, card, visibility, setVisibility, u
             },
             body: JSON.stringify(bodyParam)
         })
-        .then(response => response.json())
-        .then(data => localStorage.setItem("balance", data["balance"]))
-        .then(() => window.location.reload())
+        .then(response => {
+            if (response.status === 400){
+                const alertBox = document.createElement('div');
+                alertBox.classList.add('alert', 'login-alert');
+                alertBox.innerHTML = `
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                You dont have enough coins
+                `;
+                document.body.appendChild(alertBox);
+                setTimeout(() => {
+                    alertBox.style.display = 'none';
+                    }, 3000);
+            }
+            return response.json()
+        })
+        .then(data => {
+            if (data['message']){}
+            else{
+                localStorage.setItem("balance", data["balance"])
+                window.location.reload()
+            }
+        })
     }
 
     const handleNo = () => {
