@@ -23,12 +23,18 @@ body {
     align-items: center;
   }
   
-  .logo {
+  .logo_container {
+    display: flex;
     font-size: 2em;
     font-weight: bold;
     margin-right: 20px;
     color: var(--font-color);
     text-decoration: none;
+  }
+  .logo{
+    width: 10rem;
+    margin-top: 10px;
+    margin-left: 10px;
   }
   
   .nav-links h1 {
