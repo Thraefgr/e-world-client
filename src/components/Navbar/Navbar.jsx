@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import coin from '../../images/ecoin.png'
+import logo from '../../images/logo 6.png';
+import coin from '../../images/ecoin.png';
 
 
 
@@ -40,8 +41,8 @@ const Navbar = ({ userName, token, balance, profileImg }) => {
 
         <nav className="navbar">
             <div className="left">
-                <div className="logo">
-                    <Link to="/"><h1>EWorld</h1></Link>
+                <div className="logo_container">
+                    <Link to="/"><img className='logo' src={logo} alt="EWorld-Logo" /></Link>
                 </div>
                 <div className="nav-links">
                     <Link to="/"><h1>Home</h1></Link>
